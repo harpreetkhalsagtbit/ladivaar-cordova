@@ -1,0 +1,95 @@
+body {
+  padding-top: 50px;
+  position: relative;
+}
+pre {
+  tab-size: 8;
+}
+@media screen and (max-width:768px) {
+  .side-collapse-container {
+    width: 100%;
+    position: relative;
+    left: 0;
+    transition: left .4s;
+  }
+  .side-collapse-container.out {
+    left: 200px;
+  }
+  .side-collapse {
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    position: fixed;
+    overflow: hidden;
+    transition: width .4s;
+  }
+  .side-collapse.in {
+    width: 0;
+  }
+}
+// Classes
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.invisible {
+  visibility: hidden;
+}
+
+
+@font-face {
+  font-family: 'Dejaweb';
+  src: url('NotoSansGurmukhi-Regular.ttf');
+}
+
+.baaniFormatting h1 {
+	font-family: 'Dejaweb';
+	font-size: 1.5em;
+}
+.baaniFormatting p {
+	font-size: 25px;
+	margin: 5px;
+	color: #282460
+}
+
+.baaniFormatting span {
+  line-height: 1.8;
+  word-wrap: normal;
+  display: inline-block;
+}
+
+.highlight {
+	background: #F7941E;
+	color: #FFFFFF;
+}
+
+span {
+	border-radius: 10px;
+}
+
+.baaniFormatting h1 {
+	color: #F7941E !important;
+}
+
+.baaniFormatting h4 {
+	color: #F7941E !important;
+}
+
+.baaniFormatting pre {
+	text-align: center;
+	color: #EF2938;
+}
+
+.highlightH1 {
+	background: #F7941E;
+	color: #FFFFFF;
+}
+
+.highlightP {
+	background: #282460;
+	color: #FFFFFF;
+}
