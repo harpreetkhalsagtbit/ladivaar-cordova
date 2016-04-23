@@ -25,21 +25,12 @@ var app = {
             $("[data-attr='srigurugranthsahib_ang']").hide()
             $(window).on('hashchange', function() {
                 if (window.location.hash == "") {
-                    $("[data-attr='homeList']").show();
-                    $("[data-attr='tatkra']").hide()
-                    $("[data-attr='srigurugranthsahib_ang']").hide()
-                    $("[data-attr='nitnem_tatkra']").hide()
+                    showMe('homeList')
                 }
                 if (window.location.hash == "#srigurugranthsahibjee") {
-                    $("[data-attr='homeList']").hide();
-                    $("[data-attr='tatkra']").show()
-                    $("[data-attr='srigurugranthsahib_ang']").hide()
-                    $("[data-attr='nitnem_gurbani']").hide()
+                    showMe('tatkra')
                 } else if (window.location.hash == "#nitnem") {
-                    $("[data-attr='homeList']").hide();
-                    $("[data-attr='nitnem_tatkra']").show()
-                    $("[data-attr='srigurugranthsahib_ang']").hide()
-                    $("[data-attr='nitnem_gurbani']").hide()
+                    showMe('nitnem_tatkra')
                 } else if (window.location.hash.match(/nitnem_.*/)) {
                     var _res = window.location.hash.split(/nitnem_/)
                     if (_res.length) {
@@ -47,10 +38,7 @@ var app = {
                         var _baani = nitnemBaani[_baaniName];
                         ladivaarGenerator(_baani, "nitnenm_baani_container", true)
                     }
-                    $("[data-attr='homeList']").hide();
-                    $("[data-attr='nitnem_tatkra']").hide()
-                    $("[data-attr='srigurugranthsahib_ang']").hide()
-                    $("[data-attr='nitnem_gurbani']").show()
+                    showMe('nitnem_gurbani')
                 } else if (window.location.hash.match(/_ang_\d{1,4}/)) {
                     var _res = window.location.hash.match(/_ang_\d{1,4}/);
                     if (_res.length) {
@@ -61,53 +49,9 @@ var app = {
                             var _baani = _angData.baani
 
                             // baani_container
-                            var _htmlString = "";
-                            var _paragraphStringHTMLArr = [];
-                            for (var i = 0; i < _baani.length; i++) {
-                                var _paragraphsStr = _baani[i].baani_content.replace(/([੦-੯]+॥){2,}/g, function($0) {
-                                    return $0 + "\n"
-                                })
-                                var _paragraphsArr = _paragraphsStr.trim().split(/\n/);
-                                if (_paragraphsArr && _paragraphsArr.length) {
-                                    for (var paragraph = 0; paragraph < _paragraphsArr.length; paragraph++) {
-                                        var _wordsArr = _paragraphsArr[paragraph].split(/\s+/g);
-                                        if (_wordsArr.length) {
-                                            if (_baani[i].bold || _baani[i].tab) {
-                                                _paragraphStringHTMLArr.push("<h1 class='text-center'><span>" + _wordsArr.join("</span><span>") + "</span></h1>")
-                                            } else {
-                                                _paragraphStringHTMLArr.push("<p class='text-center'><span>" + _wordsArr.join("</span><span>") + "</span></p>")
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    console.log("Error", _baani[i].baani_content)
-                                    var _wordsArr = _baani[i].baani_content.split(/\s+/g);
-                                    if (_wordsArr.length) {
-                                        _paragraphStringHTMLArr.push("<p class='text-center'><span>" + _wordsArr.join("</span><span>") + "</span></p>")
-                                    }
-                                }
-                            }
-                            _htmlString = "<div class='baaniFormatting'>" + _paragraphStringHTMLArr.join("</div><div class='baaniFormatting'>") + "</div>"
-                            $("#baani_container").html(_htmlString)
+                            ladivaarGenerator(_baani, "baani_container", false)
                         }
-
-                        $("[data-attr='homeList']").hide();
-                        $("[data-attr='tatkra']").hide()
-                        $("[data-attr='srigurugranthsahib_ang']").show()
-
-                        $('h1 span').mouseover(function() {
-                            $(this).addClass('highlightH1')
-                        });
-                        $('h1 span').mouseout(function() {
-                            $(this).removeClass('highlightH1')
-                        });
-                        $('p span').mouseover(function() {
-                            $(this).addClass('highlightP')
-                        });
-                        $('p span').mouseout(function() {
-                            $(this).removeClass('highlightP')
-                        });
-
+                        showMe('srigurugranthsahib_ang')
                     }
                 }
             })
@@ -144,6 +88,11 @@ var app = {
 app.initialize();
 
 function ladivaarGenerator(baani, id, singleNumber) {
+    $('h1 span').unbind("mouseover");
+    $('h1 span').unbind("mouseout");
+    $('p span').unbind("mouseover");
+    $('p span').unbind("mouseout");
+
     // baani_container
     var _htmlString = "";
     var _paragraphStringHTMLArr = [];
@@ -197,4 +146,13 @@ function ladivaarGenerator(baani, id, singleNumber) {
     $('p span').mouseout(function() {
         $(this).removeClass('highlightP')
     });
+}
+
+var pageList = ['homeList', 'tatkra', 'srigurugranthsahib_ang', 'nitnem_tatkra', 'nitnem_gurbani']
+
+function showMe(me) {
+    for(var i=0;i<pageList.length;i++) {
+        $("[data-attr='" + pageList[i] + "']").hide()
+    }
+    $("[data-attr='" + me + "']").show()
 }
