@@ -21,13 +21,13 @@ var app = {
     initialize: function() {
         this.bindEvents();
         $(document).ready(function() {
-            var sideslider = $('[data-toggle=collapse-side]');
-            var sel = sideslider.attr('data-target');
-            var sel2 = sideslider.attr('data-target-2');
-            sideslider.click(function(event) {
-                $(sel).toggleClass('in');
-                $(sel2).toggleClass('out');
-            });
+            // var sideslider = $('[data-toggle=collapse-side]');
+            // var sel = sideslider.attr('data-target');
+            // var sel2 = sideslider.attr('data-target-2');
+            // sideslider.click(function(event) {
+            //     $(sel).toggleClass('in');
+            //     $(sel2).toggleClass('out');
+            // });
             $("[data-attr='tatkra']").hide()
             $("[data-attr='srigurugranthsahib_ang']").hide()
             $(window).on('hashchange', function() {

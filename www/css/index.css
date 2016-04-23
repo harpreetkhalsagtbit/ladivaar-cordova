@@ -1,3 +1,11 @@
+#baani_container, .list-group {
+  margin-top: 50px;
+}
+
+a.list-group-item:hover, a.list-group-item:focus {
+    background-color: #f0ad4e !important;
+}
+
 
 // Classes
 .show {
@@ -19,7 +27,7 @@
 
 .baaniFormatting h1 {
 	font-family: 'Dejaweb';
-	font-size: 1.5em;
+	/*font-size: 1.5em;*/
 }
 .baaniFormatting p {
 	font-size: 25px;
