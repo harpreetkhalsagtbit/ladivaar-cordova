@@ -62,8 +62,9 @@
     </nav>
     <!-- Home -->
     <div data-attr="homeList" class="list-group">
-            <a href="#srigurugranthsahibjee" class="list-group-item">Sri Guru Granth Sahib Jee</a>
-            <a href="#nitnem" class="list-group-item">Nitnem</a>
+        {{#each homePageList}}
+            <a href="#{{hash}}" class="list-group-item">{{label}}</a>
+        {{/each}}
     </div>
     <!-- Tatkra Sri Guru Granth Sahib Jee -->
     <div data-attr="tatkra" class="list-group" style="display: none;">
@@ -79,13 +80,9 @@
     </div>
     <!-- Nitnem Index -->
     <div data-attr="nitnem_tatkra" class="list-group" style="display: none;">
-        <a href="#nitnem_japjeesahib" class="list-group-item">Jap Jee Sahib</a>
-        <a href="#nitnem_jaapsahib" class="list-group-item">Jaap Sahib</a>
-        <a href="#nitnem_tavprasadsavaiye" class="list-group-item">Tav Prasad Savaiye</a>
-        <a href="#nitnem_chaupaisahib" class="list-group-item">Chaupai Sahib</a>
-        <a href="#nitnem_anandsahib" class="list-group-item">Anand Sahib</a>
-        <a href="#nitnem_rehrassahib" class="list-group-item">Rehras Sahib</a>
-        <a href="#nitnem_sohilasahib" class="list-group-item">Sohila Sahib</a>
+        {{#each nitnemPageList}}
+        <a href="#{{hash}}" class="list-group-item">{{label}}</a>
+        {{/each}}
     </div>
     <!-- Nitnem Gurbani Content -->
     <div data-attr="nitnem_gurbani" class="container-fluid" style="display: none;">

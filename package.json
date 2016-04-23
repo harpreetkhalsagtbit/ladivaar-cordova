@@ -1,0 +1,26 @@
+{
+  "name": "ladivaar-cordova",
+  "version": "1.0.0",
+  "description": "Ladivaar Mobile App using Cordova",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harpreetkhalsagtbit/ladivaar-cordova.git"
+  },
+  "author": "harpreetkhalsagtbit@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harpreetkhalsagtbit/ladivaar-cordova/issues"
+  },
+  "homepage": "https://github.com/harpreetkhalsagtbit/ladivaar-cordova#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-shell": "^1.3.0",
+    "handlebars": "^4.0.5",
+    "load-grunt-tasks": "^3.5.0",
+    "path": "^0.12.7"
+  }
+}
