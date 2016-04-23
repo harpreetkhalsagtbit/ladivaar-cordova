@@ -61,5 +61,5 @@ module.exports = function(grunt) {
 
 	// Default task(s).
 	grunt.registerTask('default', ['generateHTML', 'shell:start_cordova_browser']);
-
+	grunt.registerTask('run', ['shell:start_cordova_browser']);
 };
