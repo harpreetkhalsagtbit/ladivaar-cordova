@@ -52,9 +52,7 @@
             </div>
             <div class="dropdown" id="myNavbar">
                 <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a data-toggle="modal" data-target="#myModal">HTML</a></li>
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
+                    <li><a data-toggle="modal" data-target="#myModal">Go To</a></li>
                 </ul>
             </div>
         </div>
@@ -67,7 +65,11 @@
     <!-- Tatkra Sri Guru Granth Sahib Jee -->
     <div data-attr="tatkra" class="list-group" style="display: none;">
         {{#each tatkraList}}
-        <a href="#{{hash}}" class="list-group-item">{{label}}</a> {{/each}}
+            <a href="#{{hash}}" class="list-group-item" style="display:list-item;">
+                <div class="col-xs-6">{{label}}</div>
+                <div class="col-xs-6 text-right">{{angNo}}</div>
+            </a>
+        {{/each}}
     </div>
     <!-- Gurbani Content - Ang -->
     <div data-attr="srigurugranthsahib_ang" class="container-fluid" style="display: none;">
@@ -121,7 +123,7 @@
                     <input type="text" class="form-control"></input>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default">GO</button>
+                    <button type="button" class="btn btn-default">Go</button>
                 </div>
             </div>
         </div>

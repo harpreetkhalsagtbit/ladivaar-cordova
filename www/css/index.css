@@ -1,6 +1,13 @@
 #nitnenm_baani_container,
 .list-group {
     margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.navbar-toggle .icon-bar {
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
 }
 
 #baani_container {
