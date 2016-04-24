@@ -47,11 +47,32 @@ module.exports = function(grunt) {
 			"hash": "nitnem_sohilasahib"
 		}]
 
+		var tatkraList = [{
+			"label": "ਜਪੁ",
+			"hash": "srigurugranthsahibjee_ang_1"
+		}, {
+			"label": "ਸੋ ਦਰੁ",
+			"hash": "srigurugranthsahibjee_ang_8"
+		}, {
+			"label": "ਸੋ ਪੁਰਖੁ",
+			"hash": "srigurugranthsahibjee_ang_10"
+		}, {
+			"label": "ਸੋਹਿਲਾ",
+			"hash": "srigurugranthsahibjee_ang_13"
+		}, {
+			"label": "ਸਿਰੀ ਰਾਗੁ",
+			"hash": "srigurugranthsahibjee_ang_15"
+		}, {
+			"label": "ਰਾਗੁ ਮਾਝ",
+			"hash": "srigurugranthsahibjee_ang_95"
+		}]
+
 		var source = fs.readFileSync(path.normalize("template/index.html")).toString();
 		var template = handlebars.compile(source);
 		var html = template({
 			homePageList: mainPageListing,
-			nitnemPageList: nitnemPageListing
+			nitnemPageList: nitnemPageListing,
+			tatkraList: tatkraList
 		});
 
 		fs.writeFileSync(path.normalize("www/index.html"), html);
