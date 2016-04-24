@@ -178,7 +178,6 @@ $('a[data-slide="prev"]').click(function() {
     if (ang > 0) {
         ang = ang - 1
     }
-    console.log("Prev", ang)
 })
 
 $('a[data-slide="next"]').click(function() {
@@ -187,5 +186,5 @@ $('a[data-slide="next"]').click(function() {
     } else {
         ang = ang + 1
     }
-    console.log("Next", ang)
 })
+
