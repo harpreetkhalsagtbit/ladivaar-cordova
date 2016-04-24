@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		shell: {
 			start_cordova_browser: {
-				command: 'sudo cordova run browser'
+				command: 'cordova run browser'
 			}
 		}
 	});

@@ -1,74 +1,95 @@
-#nitnenm_baani_container, #baani_container, .list-group {
-  margin-top: 50px;
+#nitnenm_baani_container,
+.list-group {
+    margin-top: 50px;
 }
 
-a.list-group-item:hover, a.list-group-item:focus {
+#baani_container {
+	position: relative;
+	height: 100vh;
+	margin-top: 50px;
+}
+
+#baani_container .carousel .carousel-inner .item {
+	height: calc(100vh - 50px);
+}
+
+#baani_container .carousel .carousel-inner .item .carousel-caption {
+	position: initial;
+}
+
+.carousel-control.left, .carousel-control.right {
+	background: none;
+}
+
+a.list-group-item:hover,
+a.list-group-item:focus {
     background-color: #f0ad4e !important;
 }
 
-
 // Classes
 .show {
-  display: block !important;
-}
-.hidden {
-  display: none !important;
-  visibility: hidden !important;
-}
-.invisible {
-  visibility: hidden;
+    display: block !important;
 }
 
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
 
 @font-face {
-  font-family: 'Dejaweb';
-  src: url('NotoSansGurmukhi-Regular.ttf');
+    font-family: 'Dejaweb';
+    src: url('NotoSansGurmukhi-Regular.ttf');
 }
 
 .baaniFormatting h1 {
-	font-family: 'Dejaweb';
-	/*font-size: 1.5em;*/
+    font-family: 'Dejaweb';
+    /*font-size: 1.5em;*/
 }
+
 .baaniFormatting p {
-	font-size: 25px;
-	margin: 5px;
-	color: #282460
+    font-size: 25px;
+    margin: 5px;
+    color: #282460
 }
 
 .baaniFormatting span {
-  line-height: 1.8;
-  word-wrap: normal;
-  display: inline-block;
+    line-height: 1.8;
+    word-wrap: normal;
+    display: inline-block;
 }
 
 .highlight {
-	background: #F7941E;
-	color: #FFFFFF;
+    background: #F7941E;
+    color: #FFFFFF;
 }
 
 span {
-	border-radius: 10px;
+    border-radius: 10px;
 }
 
 .baaniFormatting h1 {
-	color: #F7941E !important;
+    color: #F7941E !important;
 }
 
 .baaniFormatting h4 {
-	color: #F7941E !important;
+    color: #F7941E !important;
 }
 
 .baaniFormatting pre {
-	text-align: center;
-	color: #EF2938;
+    text-align: center;
+    color: #EF2938;
 }
 
 .highlightH1 {
-	background: #F7941E;
-	color: #FFFFFF;
+    background: #F7941E;
+    color: #FFFFFF;
 }
 
 .highlightP {
-	background: #282460;
-	color: #FFFFFF;
+    background: #282460;
+    color: #FFFFFF;
 }
