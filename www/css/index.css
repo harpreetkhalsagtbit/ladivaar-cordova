@@ -13,11 +13,23 @@
 #baani_container {
 	position: relative;
 	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
 #baani_container .carousel .carousel-inner .item .carousel-caption {
 	position: initial;
 	text-shadow: none;
+}
+
+#baani_container .footer {
+	position: fixed;
+	bottom: 0;
+	height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+    color: #FFF;
+    background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
 }
 
 .carousel-control.left, .carousel-control.right {
