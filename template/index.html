@@ -52,25 +52,22 @@
             </div>
             <div class="dropdown" id="myNavbar">
                 <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="#">HTML</a></li>
+                    <li><a data-toggle="modal" data-target="#myModal">HTML</a></li>
                     <li><a href="#">CSS</a></li>
                     <li><a href="#">JavaScript</a></li>
                 </ul>
             </div>
-
         </div>
     </nav>
     <!-- Home -->
     <div data-attr="homeList" class="list-group">
         {{#each homePageList}}
-            <a href="#{{hash}}" class="list-group-item">{{label}}</a>
-        {{/each}}
+        <a href="#{{hash}}" class="list-group-item">{{label}}</a> {{/each}}
     </div>
     <!-- Tatkra Sri Guru Granth Sahib Jee -->
     <div data-attr="tatkra" class="list-group" style="display: none;">
         {{#each tatkraList}}
-            <a href="#{{hash}}" class="list-group-item">{{label}}</a>
-        {{/each}}
+        <a href="#{{hash}}" class="list-group-item">{{label}}</a> {{/each}}
     </div>
     <!-- Gurbani Content - Ang -->
     <div data-attr="srigurugranthsahib_ang" class="container-fluid" style="display: none;">
@@ -104,13 +101,28 @@
     <!-- Nitnem Index -->
     <div data-attr="nitnem_tatkra" class="list-group" style="display: none;">
         {{#each nitnemPageList}}
-        <a href="#{{hash}}" class="list-group-item">{{label}}</a>
-        {{/each}}
+        <a href="#{{hash}}" class="list-group-item">{{label}}</a> {{/each}}
     </div>
     <!-- Nitnem Gurbani Content -->
     <div data-attr="nitnem_gurbani" class="container-fluid" style="display: none;">
         <div class="row">
             <div class="container" id="nitnenm_baani_container">
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Go To</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control"></input>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default">GO</button>
+                </div>
             </div>
         </div>
     </div>

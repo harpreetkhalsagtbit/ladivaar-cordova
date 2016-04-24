@@ -52,27 +52,20 @@
             </div>
             <div class="dropdown" id="myNavbar">
                 <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="#">HTML</a></li>
+                    <li><a data-toggle="modal" data-target="#myModal">HTML</a></li>
                     <li><a href="#">CSS</a></li>
                     <li><a href="#">JavaScript</a></li>
                 </ul>
             </div>
-
         </div>
     </nav>
     <!-- Home -->
     <div data-attr="homeList" class="list-group">
-            <a href="#srigurugranthsahibjee" class="list-group-item">Sri Guru Granth Sahib Jee</a>
-            <a href="#nitnem" class="list-group-item">Nitnem</a>
+        <a href="#srigurugranthsahibjee" class="list-group-item">Sri Guru Granth Sahib Jee</a>         <a href="#nitnem" class="list-group-item">Nitnem</a> 
     </div>
     <!-- Tatkra Sri Guru Granth Sahib Jee -->
     <div data-attr="tatkra" class="list-group" style="display: none;">
-            <a href="#srigurugranthsahibjee_ang_1" class="list-group-item">ਜਪੁ</a>
-            <a href="#srigurugranthsahibjee_ang_8" class="list-group-item">ਸੋ ਦਰੁ</a>
-            <a href="#srigurugranthsahibjee_ang_10" class="list-group-item">ਸੋ ਪੁਰਖੁ</a>
-            <a href="#srigurugranthsahibjee_ang_13" class="list-group-item">ਸੋਹਿਲਾ</a>
-            <a href="#srigurugranthsahibjee_ang_15" class="list-group-item">ਸਿਰੀ ਰਾਗੁ</a>
-            <a href="#srigurugranthsahibjee_ang_95" class="list-group-item">ਰਾਗੁ ਮਾਝ</a>
+        <a href="#srigurugranthsahibjee_ang_1" class="list-group-item">ਜਪੁ</a>         <a href="#srigurugranthsahibjee_ang_8" class="list-group-item">ਸੋ ਦਰੁ</a>         <a href="#srigurugranthsahibjee_ang_10" class="list-group-item">ਸੋ ਪੁਰਖੁ</a>         <a href="#srigurugranthsahibjee_ang_13" class="list-group-item">ਸੋਹਿਲਾ</a>         <a href="#srigurugranthsahibjee_ang_15" class="list-group-item">ਸਿਰੀ ਰਾਗੁ</a>         <a href="#srigurugranthsahibjee_ang_95" class="list-group-item">ਰਾਗੁ ਮਾਝ</a> 
     </div>
     <!-- Gurbani Content - Ang -->
     <div data-attr="srigurugranthsahib_ang" class="container-fluid" style="display: none;">
@@ -105,18 +98,28 @@
     </div>
     <!-- Nitnem Index -->
     <div data-attr="nitnem_tatkra" class="list-group" style="display: none;">
-        <a href="#nitnem_japjeesahib" class="list-group-item">Jap Jee Sahib</a>
-        <a href="#nitnem_jaapsahib" class="list-group-item">Jaap Sahib</a>
-        <a href="#nitnem_tavprasadsavaiye" class="list-group-item">Tav Prasad Savaiye</a>
-        <a href="#nitnem_chaupaisahib" class="list-group-item">Chaupai Sahib</a>
-        <a href="#nitnem_anandsahib" class="list-group-item">Anand Sahib</a>
-        <a href="#nitnem_rehrassahib" class="list-group-item">Rehras Sahib</a>
-        <a href="#nitnem_sohilasahib" class="list-group-item">Sohila Sahib</a>
+        <a href="#nitnem_japjeesahib" class="list-group-item">Jap Jee Sahib</a>         <a href="#nitnem_jaapsahib" class="list-group-item">Jaap Sahib</a>         <a href="#nitnem_tavprasadsavaiye" class="list-group-item">Tav Prasad Savaiye</a>         <a href="#nitnem_chaupaisahib" class="list-group-item">Chaupai Sahib</a>         <a href="#nitnem_anandsahib" class="list-group-item">Anand Sahib</a>         <a href="#nitnem_rehrassahib" class="list-group-item">Rehras Sahib</a>         <a href="#nitnem_sohilasahib" class="list-group-item">Sohila Sahib</a> 
     </div>
     <!-- Nitnem Gurbani Content -->
     <div data-attr="nitnem_gurbani" class="container-fluid" style="display: none;">
         <div class="row">
             <div class="container" id="nitnenm_baani_container">
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Go To</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control"></input>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default">GO</button>
+                </div>
             </div>
         </div>
     </div>

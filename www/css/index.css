@@ -5,16 +5,19 @@
 
 #baani_container {
 	position: relative;
-	height: 100vh;
 	padding-top: 50px;
 }
 
 #baani_container .carousel .carousel-inner .item .carousel-caption {
 	position: initial;
+	text-shadow: none;
 }
 
 .carousel-control.left, .carousel-control.right {
 	background: none;
+	position: fixed;
+	color: red;
+	opacity: 1;
 }
 
 a.list-group-item:hover,
