@@ -69,7 +69,10 @@
     <!-- Tatkra Sri Guru Granth Sahib Jee -->
     <div data-attr="tatkra" class="list-group" style="display: none;">
         {{#each tatkraList}}
-            <a href="#{{hash}}" class="list-group-item">{{label}}</a>
+            <a href="#{{hash}}" class="list-group-item" style="display:list-item;">
+                <div class="col-xs-6">{{label}}</div>
+                <div class="col-xs-6 text-right">{{angNo}}</div>
+            </a>
         {{/each}}
     </div>
     <!-- Gurbani Content - Ang -->

@@ -49,145 +49,192 @@ module.exports = function(grunt) {
 
 		var tatkraList = [{
 			"label": "ਜਪੁ",
-			"hash": "srigurugranthsahibjee_ang_1"
+			"hash": "srigurugranthsahibjee_ang_1",
+			"angNo": "੧"
 		}, {
 			"label": "ਸੋ ਦਰੁ",
-			"hash": "srigurugranthsahibjee_ang_8"
+			"hash": "srigurugranthsahibjee_ang_8",
+			"angNo": "੮"
 		}, {
 			"label": "ਸੋ ਪੁਰਖੁ",
-			"hash": "srigurugranthsahibjee_ang_10"
+			"hash": "srigurugranthsahibjee_ang_10",
+			"angNo": "੧੦"
 		}, {
 			"label": "ਸੋਹਿਲਾ",
-			"hash": "srigurugranthsahibjee_ang_12"
+			"hash": "srigurugranthsahibjee_ang_12",
+			"angNo": "੧੨"
 		}, {
 			"label": "ਸਿਰੀਰਾਗੁ",
-			"hash": "srigurugranthsahibjee_ang_14"
+			"hash": "srigurugranthsahibjee_ang_14",
+			"angNo": "੧੪"
 		}, {
 			"label": "ਰਾਗੁਮਾਝ",
-			"hash": "srigurugranthsahibjee_ang_94"
+			"hash": "srigurugranthsahibjee_ang_94",
+			"angNo": "੯੪"
 		}, {
 			"label": "ਰਾਗੁਗਉੜੀ",
-			"hash": "srigurugranthsahibjee_ang_151"
+			"hash": "srigurugranthsahibjee_ang_151",
+			"angNo": "੧੫੧"
 		}, {
 			"label": "ਰਾਗੁਆਸਾ",
-			"hash": "srigurugranthsahibjee_ang_347"
+			"hash": "srigurugranthsahibjee_ang_347",
+			"angNo": "੩੪੭"
 		}, {
 			"label": "ਰਾਗੁਗੂਜਰੀ",
-			"hash": "srigurugranthsahibjee_ang_489"
+			"hash": "srigurugranthsahibjee_ang_489",
+			"angNo": "੪੮੯"
 		}, {
 			"label": "ਰਾਗੁਦੇਵਗੰਧਾਰੀ",
-			"hash": "srigurugranthsahibjee_ang_527"
+			"hash": "srigurugranthsahibjee_ang_527",
+			"angNo": "੫੨੭"
 		}, {
 			"label": "ਰਾਗੁਬਿਹਾਗੜਾ",
-			"hash": "srigurugranthsahibjee_ang_537"
+			"hash": "srigurugranthsahibjee_ang_537",
+			"angNo": "੫੩੭"
 		}, {
 			"label": "ਰਾਗੁਵਡਹੰਸੁ",
-			"hash": "srigurugranthsahibjee_ang_557"
+			"hash": "srigurugranthsahibjee_ang_557",
+			"angNo": "੫੫੭"
 		}, {
 			"label": "ਰਾਗੁਸੋਰਠਿ",
-			"hash": "srigurugranthsahibjee_ang_595"
-		},{
-			"label":"ਰਾਗੁਧਨਾਸਰੀ",
-			"hash":"srigurugranthsahibjee_ang_660"
-		},{
-			"label":"ਰਾਗੁਜੈਤਸਰੀ",
-			"hash":"srigurugranthsahibjee_ang_696"
-		},{
-			"label":"ਰਾਗੁਟੋਡੀ",
-			"hash":"srigurugranthsahibjee_ang_711"
-		},{
-			"label":"ਰਾਗੁਬੈਰਾੜੀ",
-			"hash":"srigurugranthsahibjee_ang_719"
-		},{
-			"label":"ਰਾਗੁਤਿਲੰਗ",
-			"hash":"srigurugranthsahibjee_ang_721"
-		},{
-			"label":"ਰਾਗੁਸੂਹੀ",
-			"hash":"srigurugranthsahibjee_ang_728"
-		},{
-			"label":"ਰਾਗੁਬਿਲਾਵਲੁ",
-			"hash":"srigurugranthsahibjee_ang_795"
-		},{
-			"label":"ਰਾਗੁਗੋਂਡ",
-			"hash":"srigurugranthsahibjee_ang_859"
-		},{
-			"label":"ਰਾਗੁਰਾਮਕਲੀ",
-			"hash":"srigurugranthsahibjee_ang_876"
-		},{
-			"label":"ਰਾਗੁਨਟਨਾਰਾਇਨ",
-			"hash":"srigurugranthsahibjee_ang_975"
-		},{
-			"label":"ਰਾਗੁਮਾਲੀਗਉੜਾ",
-			"hash":"srigurugranthsahibjee_ang_984"
-		},{
-			"label":"ਰਾਗੁਮਾਰੂ",
-			"hash":"srigurugranthsahibjee_ang_989"
-		},{
-			"label":"ਰਾਗੁਤੁਖਾਰੀ",
-			"hash":"srigurugranthsahibjee_ang_1107"
-		},{
-			"label":"ਰਾਗੁਕੇਦਾਰਾ",
-			"hash":"srigurugranthsahibjee_ang_1118"
-		},{
-			"label":"ਰਾਗੁਭੈਰਉ",
-			"hash":"srigurugranthsahibjee_ang_1125"
-		},{
-			"label":"ਰਾਗੁਬਸੰਤੁ",
-			"hash":"srigurugranthsahibjee_ang_1168"
-		},{
-			"label":"ਰਾਗੁਸਾਰਗ",
-			"hash":"srigurugranthsahibjee_ang_1197"
-		},{
-			"label":"ਰਾਗੁਮਲਾਰ",
-			"hash":"srigurugranthsahibjee_ang_1254"
-		},{
-			"label":"ਰਾਗੁਕਾਨੜਾ",
-			"hash":"srigurugranthsahibjee_ang_1294"
-		},{
-			"label":"ਰਾਗੁਕਲਿਆਨ",
-			"hash":"srigurugranthsahibjee_ang_1319"
-		},{
-			"label":"ਰਾਗੁਪ੍ਰਭਾਤੀ",
-			"hash":"srigurugranthsahibjee_ang_1327"
-		},{
-			"label":"ਰਾਗੁਜੈਜਾਵੰਤੀ",
-			"hash":"srigurugranthsahibjee_ang_1352"
-		},{
-			"label":"ਸਲੋਕਸਹਸਕ੍ਰਿਤੀਮਹਲਾ੧",
-			"hash":"srigurugranthsahibjee_ang_1353"
-		},{
-			"label":"ਸਲੋਕਸਹਸਕ੍ਰਿਤੀਮਹਲਾ੫",
-			"hash":"srigurugranthsahibjee_ang_1353"
-		},{
-			"label":"ਮਹਲਾ੫ਗਾਥਾ",
-			"hash":"srigurugranthsahibjee_ang_1360"
-		},{
-			"label":"ਫੁਨਹੇਮਹਲਾ੫",
-			"hash":"srigurugranthsahibjee_ang_1361"
-		},{
-			"label":"ਚਉਬੋਲੇਮਹਲਾ੫",
-			"hash":"srigurugranthsahibjee_ang_1363"
-		},{
-			"label":"ਸਲੋਕਭਗਤਕਬੀਰਜੀਉਕੇ",
-			"hash":"srigurugranthsahibjee_ang_1364"
-		},{
-			"label":"ਸਲੋਕਸੇਖਫਰੀਦਕੇ",
-			"hash":"srigurugranthsahibjee_ang_1377"
-		},{
-			"label":"ਸਵਯੇਸ੍ਰੀਮੁਖਬਾਕਮਹਲਾ੫",
-			"hash":"srigurugranthsahibjee_ang_1385"
-		},{
-			"label":"ਸਲੋਕਵਾਰਾਂਤੇਵਧੀਕ",
-			"hash":"srigurugranthsahibjee_ang_1410"
-		},{
-			"label":"ਸਲੋਕਮਹਲਾ੯",
-			"hash":"srigurugranthsahibjee_ang_1426"
-		},{
-			"label":"ਮੁੰਦਾਵਣੀਮਹਲਾ੫",
-			"hash":"srigurugranthsahibjee_ang_1429"
+			"hash": "srigurugranthsahibjee_ang_595",
+			"angNo": "੫੯੫"
 		}, {
-			"label":"ਰਾਗਮਾਲਾ",
-			"hash":"srigurugranthsahibjee_ang_1429"
+			"label": "ਰਾਗੁਧਨਾਸਰੀ",
+			"hash": "srigurugranthsahibjee_ang_660",
+			"angNo": "੬੬੦"
+		}, {
+			"label": "ਰਾਗੁਜੈਤਸਰੀ",
+			"hash": "srigurugranthsahibjee_ang_696",
+			"angNo": "੬੯੬"
+		}, {
+			"label": "ਰਾਗੁਟੋਡੀ",
+			"hash": "srigurugranthsahibjee_ang_711",
+			"angNo": "੭੧੧"
+		}, {
+			"label": "ਰਾਗੁਬੈਰਾੜੀ",
+			"hash": "srigurugranthsahibjee_ang_719",
+			"angNo": "੭੧੯"
+		}, {
+			"label": "ਰਾਗੁਤਿਲੰਗ",
+			"hash": "srigurugranthsahibjee_ang_721",
+			"angNo": "੭੨੧"
+		}, {
+			"label": "ਰਾਗੁਸੂਹੀ",
+			"hash": "srigurugranthsahibjee_ang_728",
+			"angNo": "੭੨੮"
+		}, {
+			"label": "ਰਾਗੁਬਿਲਾਵਲੁ",
+			"hash": "srigurugranthsahibjee_ang_795",
+			"angNo": "੭੯੫"
+		}, {
+			"label": "ਰਾਗੁਗੋਂਡ",
+			"hash": "srigurugranthsahibjee_ang_859",
+			"angNo": "੮੫੯"
+		}, {
+			"label": "ਰਾਗੁਰਾਮਕਲੀ",
+			"hash": "srigurugranthsahibjee_ang_876",
+			"angNo": "੮੭੬"
+		}, {
+			"label": "ਰਾਗੁਨਟਨਾਰਾਇਨ",
+			"hash": "srigurugranthsahibjee_ang_975",
+			"angNo": "੯੭੫"
+		}, {
+			"label": "ਰਾਗੁਮਾਲੀਗਉੜਾ",
+			"hash": "srigurugranthsahibjee_ang_984",
+			"angNo": "੯੮੪"
+		}, {
+			"label": "ਰਾਗੁਮਾਰੂ",
+			"hash": "srigurugranthsahibjee_ang_989",
+			"angNo": "੯੮੯"
+		}, {
+			"label": "ਰਾਗੁਤੁਖਾਰੀ",
+			"hash": "srigurugranthsahibjee_ang_1107",
+			"angNo": "੧੧੦੭"
+		}, {
+			"label": "ਰਾਗੁਕੇਦਾਰਾ",
+			"hash": "srigurugranthsahibjee_ang_1118",
+			"angNo": "੧੧੧੮"
+		}, {
+			"label": "ਰਾਗੁਭੈਰਉ",
+			"hash": "srigurugranthsahibjee_ang_1125",
+			"angNo": "੧੧੨੫"
+		}, {
+			"label": "ਰਾਗੁਬਸੰਤੁ",
+			"hash": "srigurugranthsahibjee_ang_1168",
+			"angNo": "੧੧੬੮"
+		}, {
+			"label": "ਰਾਗੁਸਾਰਗ",
+			"hash": "srigurugranthsahibjee_ang_1197",
+			"angNo": "੧੧੯੭"
+		}, {
+			"label": "ਰਾਗੁਮਲਾਰ",
+			"hash": "srigurugranthsahibjee_ang_1254",
+			"angNo": "੧੨੫੪"
+		}, {
+			"label": "ਰਾਗੁਕਾਨੜਾ",
+			"hash": "srigurugranthsahibjee_ang_1294",
+			"angNo": "੧੨੯੪"
+		}, {
+			"label": "ਰਾਗੁਕਲਿਆਨ",
+			"hash": "srigurugranthsahibjee_ang_1319",
+			"angNo": "੧੩੧੯"
+		}, {
+			"label": "ਰਾਗੁਪ੍ਰਭਾਤੀ",
+			"hash": "srigurugranthsahibjee_ang_1327",
+			"angNo": "੧੩੨੭"
+		}, {
+			"label": "ਰਾਗੁਜੈਜਾਵੰਤੀ",
+			"hash": "srigurugranthsahibjee_ang_1352",
+			"angNo": "੧੩੫੨"
+		}, {
+			"label": "ਸਲੋਕਸਹਸਕ੍ਰਿਤੀਮਹਲਾ੧",
+			"hash": "srigurugranthsahibjee_ang_1353",
+			"angNo": "੧੩੫੩"
+		}, {
+			"label": "ਸਲੋਕਸਹਸਕ੍ਰਿਤੀਮਹਲਾ੫",
+			"hash": "srigurugranthsahibjee_ang_1353",
+			"angNo": "੧੩੫੩"
+		}, {
+			"label": "ਮਹਲਾ੫ਗਾਥਾ",
+			"hash": "srigurugranthsahibjee_ang_1360",
+			"angNo": "੧੩੬੦"
+		}, {
+			"label": "ਫੁਨਹੇਮਹਲਾ੫",
+			"hash": "srigurugranthsahibjee_ang_1361",
+			"angNo": "੧੩੬੧"
+		}, {
+			"label": "ਚਉਬੋਲੇਮਹਲਾ੫",
+			"hash": "srigurugranthsahibjee_ang_1363",
+			"angNo": "੧੩੬੩"
+		}, {
+			"label": "ਸਲੋਕਭਗਤਕਬੀਰਜੀਉਕੇ",
+			"hash": "srigurugranthsahibjee_ang_1364",
+			"angNo": "੧੩੬੪"
+		}, {
+			"label": "ਸਲੋਕਸੇਖਫਰੀਦਕੇ",
+			"hash": "srigurugranthsahibjee_ang_1377",
+			"angNo": "੧੩੭੭"
+		}, {
+			"label": "ਸਵਯੇਸ੍ਰੀਮੁਖਬਾਕਮਹਲਾ੫",
+			"hash": "srigurugranthsahibjee_ang_1385",
+			"angNo": "੧੩੮੫"
+		}, {
+			"label": "ਸਲੋਕਵਾਰਾਂਤੇਵਧੀਕ",
+			"hash": "srigurugranthsahibjee_ang_1410",
+			"angNo": "੧੪੧੦"
+		}, {
+			"label": "ਸਲੋਕਮਹਲਾ੯",
+			"hash": "srigurugranthsahibjee_ang_1426",
+			"angNo": "੧੪੨੬"
+		}, {
+			"label": "ਮੁੰਦਾਵਣੀਮਹਲਾ੫",
+			"hash": "srigurugranthsahibjee_ang_1429",
+			"angNo": "੧੪੨੯"
+		}, {
+			"label": "ਰਾਗਮਾਲਾ",
+			"hash": "srigurugranthsahibjee_ang_1429",
+			"angNo": "੧੪੨੯"
 		}]
 
 		var source = fs.readFileSync(path.normalize("template/index.html")).toString();
