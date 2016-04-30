@@ -73,6 +73,9 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
     },
+    onBackKeyDown:function() {
+        console.log("hello back")
+    },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         // var parentElement = document.getElementById(id);
@@ -131,7 +134,7 @@ function ladivaarGenerator(baani, element, singleNumber) {
         }
         _htmlString = "<div class='baaniFormatting'>" + _paragraphStringHTMLArr.join("</div><div class='baaniFormatting'>") + "</div>"
         $(element).html(_htmlString)
-
+        window.scrollTo(0,0)
         $("[data-attr='homeList']").hide();
         $("[data-attr='tatkra']").hide()
         $("[data-attr='srigurugranthsahib_ang']").show()
