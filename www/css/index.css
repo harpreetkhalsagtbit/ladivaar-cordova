@@ -37,6 +37,14 @@
 	position: fixed;
 	color: red;
 	opacity: 1;
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.baani_container_carousel {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 a.list-group-item:hover,
