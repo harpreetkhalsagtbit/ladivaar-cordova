@@ -50,6 +50,7 @@ var app = {
                             var _baani = _angData.baani
                             // baani_container
                             ladivaarGenerator(_baani, $(".active [data-content]"), false)
+                            $('#angPositionFooter').html((ang+1)+"/1430")
                         }
                         showMe('srigurugranthsahib_ang')
                     }
@@ -169,6 +170,7 @@ $('#carousel-example-generic').on('slide.bs.carousel', function () {
             // jQuery("div.item.active [data-content]").html(demo_data[ang-1]["content"])
             jQuery("div.item:not(.active) [data-content]").html("")
         }
+        $('#angPositionFooter').html((ang+1)+"/1430")
     }, 1000)
 })
 
@@ -188,3 +190,20 @@ $('a[data-slide="next"]').click(function() {
     }
 })
 
+$('#goToAngButton').click(function() {
+    var _ang = parseInt($("#goToAngTextBox").val());
+    if(!isNaN(_ang) && _ang > 0 && _ang <= 1430) {
+        window.location.hash = "srigurugranthsahibjee_ang_" + _ang
+    }
+    $('#myModal').modal('hide');
+    $("#goToAngTextBox").val("")
+})
+
+function minmax(value, min, max) 
+{
+    if(parseInt(value) < min || isNaN(value)) 
+        return 0; 
+    else if(parseInt(value) > max) 
+        return 1430; 
+    else return value;
+}
