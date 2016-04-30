@@ -134,7 +134,8 @@ function ladivaarGenerator(baani, element, singleNumber) {
         }
         _htmlString = "<div class='baaniFormatting'>" + _paragraphStringHTMLArr.join("</div><div class='baaniFormatting'>") + "</div>"
         $(element).html(_htmlString)
-        window.scrollTo(0,0)
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+
         $("[data-attr='homeList']").hide();
         $("[data-attr='tatkra']").hide()
         $("[data-attr='srigurugranthsahib_ang']").show()
