@@ -17,33 +17,33 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('generateHTML', function() {
 		var mainPageListing = [{
-			"label": "Sri Guru Granth Sahib Jee",
+			"label": "ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ",
 			"hash": "srigurugranthsahibjee"
 		}, {
-			"label": "Nitnem",
+			"label": "ਨਿਤਨੇਮ",
 			"hash": "nitnem"
 		}]
 
 		var nitnemPageListing = [{
-			"label": "Jap Jee Sahib",
+			"label": "ਜਪੁਜੀ ਸਾਹਿਬ",
 			"hash": "nitnem_japjeesahib"
 		}, {
-			"label": "Jaap Sahib",
+			"label": "ਜਾਪੁ ਸਾਹਿਬ",
 			"hash": "nitnem_jaapsahib"
 		}, {
-			"label": "Tav Prasad Savaiye",
+			"label": "ਤ੍ਵ ਪ੍ਰਸਾਦਿ ਸਵੱਯੇ",
 			"hash": "nitnem_tavprasadsavaiye"
 		}, {
-			"label": "Chaupai Sahib",
+			"label": "ਚੌਪਈ ਸਾਹਿਬ",
 			"hash": "nitnem_chaupaisahib"
 		}, {
-			"label": "Anand Sahib",
+			"label": "ਅਨੰਦੁ ਸਾਹਿਬ",
 			"hash": "nitnem_anandsahib"
 		}, {
-			"label": "Rehras Sahib",
+			"label": "ਰਹਰਾਸਿ ਸਾਹਿਬ",
 			"hash": "nitnem_rehrassahib"
 		}, {
-			"label": "Sohila Sahib",
+			"label": "ਸੋਹਿਲਾ ਸਾਹਿਬ",
 			"hash": "nitnem_sohilasahib"
 		}]
 
