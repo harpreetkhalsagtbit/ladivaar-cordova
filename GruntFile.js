@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 			"label": "ਜਾਪੁ ਸਾਹਿਬ",
 			"hash": "nitnem_jaapsahib"
 		}, {
-			"label": "ਤ੍ਵ ਪ੍ਰਸਾਦਿ ਸਵੱਯੇ",
+			"label": "ਤ੍ਵ ਪ੍ਰਸਾਦਿ ਸ੍ਵਯੇ",
 			"hash": "nitnem_tavprasadsavaiye"
 		}, {
 			"label": "ਚੌਪਈ ਸਾਹਿਬ",
