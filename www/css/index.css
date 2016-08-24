@@ -1,3 +1,108 @@
+body {
+    background-color: #f1f1f3;
+}
+
+/*
+custom css for navbar
+ */
+.navbar-default {
+  background-color: #5bb7a9;
+  border-color: #4e9d91;
+  /*Added by Harpreet*/
+  background-image: none;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #5bb7a9;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #ffffff;
+  background-color: #4e9d91;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #4e9d91;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  background-color: #4e9d91;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #4e9d91;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #4e9d91;
+}
+.navbar-default .navbar-toggle {
+  border-color: #4e9d91;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #4e9d91;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #4e9d91;
+  }
+}
+
+
+/*
+Cusm CSS for App
+*/
+
+
 #nitnem_baani_container,
 .list-group {
     margin-top: 50px;
@@ -64,6 +169,7 @@ a.list-group-item:focus {
 
 .list-group-item {
     font-size: 20px;
+    background-color: #f1f1f3;
 }
 
 .invisible {
@@ -83,7 +189,7 @@ a.list-group-item:focus {
 .baaniFormatting p {
     font-size: 25px;
     margin: 5px;
-    color: #282460
+    color: #000;
 }
 
 .baaniFormatting span {
@@ -93,7 +199,7 @@ a.list-group-item:focus {
 }
 
 .highlight {
-    background: #F7941E;
+    background: #5bb7a9;
     color: #FFFFFF;
 }
 
@@ -102,11 +208,11 @@ span {
 }
 
 .baaniFormatting h1 {
-    color: #F7941E !important;
+    color: #5bb7a9 !important;
 }
 
 .baaniFormatting h4 {
-    color: #F7941E !important;
+    color: #5bb7a9 !important;
 }
 
 .baaniFormatting pre {
@@ -115,11 +221,11 @@ span {
 }
 
 .highlightH1 {
-    background: #F7941E;
+    background: #5bb7a9;
     color: #FFFFFF;
 }
 
 .highlightP {
-    background: #282460;
+    background: #000;
     color: #FFFFFF;
 }
