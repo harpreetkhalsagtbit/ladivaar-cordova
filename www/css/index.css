@@ -130,11 +130,12 @@ Cusm CSS for App
 	position: fixed;
 	bottom: 0;
 	height: 40px;
-    line-height: 40px;
-    text-align: center;
-    width: 100%;
-    color: #FFF;
-    background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+  color: #FFF;
+  /*background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);*/
+  background-image: linear-gradient(to bottom,rgba(131, 199, 189, 1) 0,#5bb7a9 100%);
 }
 
 .carousel-control.left, .carousel-control.right {

@@ -26,11 +26,14 @@ var app = {
             $(window).on('hashchange', function() {
                 if (window.location.hash == "") {
                     showMe('homeList')
+                    // $(".headerTitle").html("Ladivaar.com")
                 }
                 if (window.location.hash == "#srigurugranthsahibjee") {
                     showMe('tatkra')
+                    // $(".headerTitle").html("ਤਤਕਰਾ ਰਾਗਾਂ ਕਾ")
                 } else if (window.location.hash == "#nitnem") {
                     showMe('nitnem_tatkra')
+                    // $(".headerTitle").html("ਨਿਤਨੇਮ")
                 } else if (window.location.hash.match(/nitnem_.*/)) {
                     var _res = window.location.hash.split(/nitnem_/)
                     if (_res.length) {
@@ -40,6 +43,7 @@ var app = {
                     }
                     showMe('nitnem_gurbani')
                 } else if (window.location.hash.match(/_ang_\d{1,4}/)) {
+                    // $(".headerTitle").html("ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ")
                     var _res = window.location.hash.match(/_ang_\d{1,4}/);
                     if (_res.length) {
                         var _angString = _res[0]
