@@ -10,6 +10,7 @@ custom css for navbar
   border-color: #4e9d91;
   /*Added by Harpreet*/
   background-image: none;
+  background-image: linear-gradient(to bottom,rgba(131, 199, 189, 1) 0,#5bb7a9 100%);
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
