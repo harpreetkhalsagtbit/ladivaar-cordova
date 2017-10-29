@@ -21,27 +21,96 @@ var app = {
     initialize: function() {
         this.bindEvents();
         $(document).ready(function() {
-            $("[data-attr='tatkra']").hide()
-            $("[data-attr='srigurugranthsahib_ang']").hide()
+
+			$(".list-group-home .list-item").click(function(e) {
+				// $(".list-group-home").removeClass(" list-group-center")
+				// $(".list-group-2").removeClass("list-group-right")
+				// $(".list-group-3").removeClass("list-group-left")
+
+				// $(".list-group-home").addClass("list-group-left")
+				// $(".list-group-2").addClass("list-group-center")
+				// $(".list-group-3").addClass("list-group-right")
+			})
+
+			$(".list-group-2 .list-item").click(function(e) {
+				$(".list-group-2").removeClass(" list-group-center")
+				$(".list-group-3").removeClass("list-group-right")
+				$(".list-group-home").removeClass("list-group-left")
+
+				$(".list-group-2").addClass("list-group-left")
+				$(".list-group-3").addClass("list-group-center")
+				$(".list-group-home").addClass("list-group-right")
+			})
+
+			$(".list-group-3 .list-item").click(function(e) {
+				$(".list-group-3").removeClass(" list-group-center")
+				$(".list-group-home").removeClass("list-group-right")
+				$(".list-group-2").removeClass("list-group-left")
+
+				$(".list-group-3").addClass("list-group-left")
+				$(".list-group-home").addClass("list-group-center")
+				$(".list-group-2").addClass("list-group-right")
+			})
+
+
+            // $("[data-attr='tatkra']").hide()
+            // $("[data-attr='srigurugranthsahib_ang']").hide()
             $(window).on('hashchange', function() {
+            	console.log("haschange", window.location.hash)
                 if (window.location.hash == "") {
-                    showMe('homeList')
+                    // showMe('homeList')
                     // $(".headerTitle").html("Ladivaar.com")
+
+
+                    $(".main_screen_list").removeClass("list-group-left")
+                    $(".tatkra_list").removeClass("list-group-center")  
+
+                    // handle both cases for back
+                    $(".main_screen_list").addClass("list-group-center")
+                    $(".tatkra_list").addClass("list-group-right")
+
+					$(".main_screen_list").addClass("list-group-center")
+					$(".nitnem_list").addClass("list-group-right")
+
                 }
                 if (window.location.hash == "#srigurugranthsahibjee") {
-                    showMe('tatkra')
+                    // showMe('tatkra')
                     // $(".headerTitle").html("ਤਤਕਰਾ ਰਾਗਾਂ ਕਾ")
+
+					$(".main_screen_list").removeClass("list-group-center")
+					$(".tatkra_list").removeClass("list-group-right")
+
+					$(".main_screen_list").addClass("list-group-left")
+					$(".tatkra_list").addClass("list-group-center")
+
                 } else if (window.location.hash == "#nitnem") {
-                    showMe('nitnem_tatkra')
+                    // showMe('nitnem_tatkra')
                     // $(".headerTitle").html("ਨਿਤਨੇਮ")
+
+					$(".main_screen_list").removeClass("list-group-center")
+					$(".nitnem_list").removeClass("list-group-right")
+					$(".nitnem_list").removeClass("list-group-left")
+					$(".nitnem_baani_page").removeClass("list-group-center")
+
+
+					$(".main_screen_list").addClass("list-group-left")
+					$(".nitnem_list").addClass("list-group-center")
+					$(".nitnem_baani_page").addClass("list-group-right")
+
                 } else if (window.location.hash.match(/nitnem_.*/)) {
+					$(".nitnem_list").removeClass("list-group-center")
+					$(".nitnem_list").addClass("list-group-left")
+
+					$(".nitnem_baani_page").removeClass("list-group-right")
+					$(".nitnem_baani_page").addClass("list-group-center")
+
                     var _res = window.location.hash.split(/nitnem_/)
                     if (_res.length) {
                         var _baaniName = _res[1]
                         var _baani = nitnemBaani[_baaniName];
                         ladivaarGenerator(_baani, $("#nitnem_baani_container"), true)
                     }
-                    showMe('nitnem_gurbani')
+                    // showMe('nitnem_gurbani')
                 } else if (window.location.hash.match(/_ang_\d{1,4}/)) {
                     // $(".headerTitle").html("ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ")
                     var _res = window.location.hash.match(/_ang_\d{1,4}/);
@@ -56,7 +125,7 @@ var app = {
                             ladivaarGenerator(_baani, $(".active [data-content]"), false)
                             $('#angPositionFooter').html((ang + 1) + "/1430")
                         }
-                        showMe('srigurugranthsahib_ang')
+                        // showMe('srigurugranthsahib_ang')
                     }
                 }
             })
@@ -140,9 +209,9 @@ function ladivaarGenerator(baani, element, singleNumber) {
         $(element).html(_htmlString)
         $("html, body").animate({ scrollTop: 0 }, "slow");
 
-        $("[data-attr='homeList']").hide();
-        $("[data-attr='tatkra']").hide()
-        $("[data-attr='srigurugranthsahib_ang']").show()
+        // $("[data-attr='homeList']").hide();
+        // $("[data-attr='tatkra']").hide()
+        // $("[data-attr='srigurugranthsahib_ang']").show()
 
         $('h1 span').mouseover(function() {
             $(this).addClass('highlightH1')
