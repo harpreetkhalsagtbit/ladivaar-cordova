@@ -1,2 +1,2 @@
 # ladivaar-cordova
-Ladivaar Android App - Bootstrap Cordova
+Ladivaar Android App - Cordova
