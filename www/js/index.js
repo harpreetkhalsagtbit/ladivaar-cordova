@@ -112,6 +112,11 @@ var app = {
                     }
                     // showMe('nitnem_gurbani')
                 } else if (window.location.hash.match(/_ang_\d{1,4}/)) {
+					$(".tatkra_list").removeClass("list-group-center")
+					$(".tatkra_list").addClass("list-group-left")
+
+					$(".guru_granth_sahib_baani").removeClass("list-group-right")
+					$(".guru_granth_sahib_baani").addClass("list-group-center")
                     // $(".headerTitle").html("ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ")
                     var _res = window.location.hash.match(/_ang_\d{1,4}/);
                     if (_res.length) {
@@ -119,10 +124,11 @@ var app = {
                         if (_angString.match(/\d+/)) {
                             ang = _angString.match(/\d+/)[0]
                             ang--;
+                            window.angNo = ang;
                             var _angData = data[ang];
                             var _baani = _angData.baani
                                 // baani_container
-                            ladivaarGenerator(_baani, $(".active [data-content]"), false)
+                            ladivaarGenerator(_baani, $(".list-group-center-on-next"), false)
                             $('#angPositionFooter').html((ang + 1) + "/1430")
                         }
                         // showMe('srigurugranthsahib_ang')
@@ -285,3 +291,49 @@ function minmax(value, min, max) {
         return 1430;
     else return value;
 }
+
+var resim = $(".swipe-gesture");
+resim.hammer().on("swipeleft", function(ev) {
+    console.log('left: ', ev);
+    var center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
+    var left = $(".list-group-left-on-next").length?$(".list-group-left-on-next"):$(".list-group-left-on-prev")
+    var right = $(".list-group-right-on-next").length?$(".list-group-right-on-next"):$(".list-group-right-on-prev")
+
+    $(right).html("")
+    $(center).removeClass("list-group-center-on-next list-group-center-on-prev").addClass("list-group-left-on-next")
+    $(left).removeClass("list-group-left-on-next list-group-left-on-prev").addClass("list-group-right-on-next")
+    $(right).removeClass("list-group-right-on-next list-group-right-on-prev").addClass("list-group-center-on-next")
+
+	setTimeout(function() {
+        window.angNo++;
+        var _angData = data[window.angNo];
+        var _baani = _angData.baani
+            // baani_container
+	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
+        ladivaarGenerator(_baani, center, false)
+	}, 1000)
+
+
+});
+
+resim.hammer().on("swiperight", function(ev) {
+    console.log('right: ', ev);
+    var center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
+    var left = $(".list-group-left-on-next").length?$(".list-group-left-on-next"):$(".list-group-left-on-prev")
+    var right = $(".list-group-right-on-next").length?$(".list-group-right-on-next"):$(".list-group-right-on-prev")
+
+    $(left).html("")
+    $(center).removeClass("list-group-center-on-prev list-group-center-on-next").addClass("list-group-right-on-prev")
+    $(left).removeClass("list-group-left-on-prev list-group-left-on-next").addClass("list-group-center-on-prev")
+    $(right).removeClass("list-group-right-on-prev list-group-right-on-next").addClass("list-group-left-on-prev")
+
+	setTimeout(function() {
+	    window.angNo--;
+	    var _angData = data[window.angNo];
+	    var _baani = _angData.baani
+	        // baani_container
+	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
+	    ladivaarGenerator(_baani, center, false)
+	}, 1000)
+});
+

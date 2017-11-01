@@ -128,6 +128,77 @@ li a {
   padding-bottom: 100px;
 }
 
+.guru_granth_sahib_baani {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+  overflow: scroll;
+  padding-bottom: 100px;
+}
+
+.list-group-center-on-next{
+    transform:translateX(0%);
+    transition: all ease 0.8s;
+}
+
+.list-group-left-on-next{
+    transform:translateX(-100%);
+    transition: all ease 0.8s;
+}
+
+.list-group-right-on-next{
+    transform:translateX(100%);
+/*     transition: all ease 0.8s; */
+}
+
+.list-group-center-on-prev{
+    transform:translateX(0%);
+    transition: all ease 0.8s;
+}
+
+.list-group-left-on-prev{
+    transform:translateX(-100%);
+/*     transition: all ease 0.8s; */
+}
+
+.list-group-right-on-prev{
+    transform:translateX(100%);
+    transition: all ease 0.8s;
+}
+
+
+.main_screen_listX {
+  /*top:70px;*/
+  width:100%;
+  position:fixed;
+  display:flex;
+  flex-direction:column
+}
+
+.tatkra_listX {
+  /*top:70px;*/
+  width:100%;
+  position:fixed;
+  display:flex;
+  flex-direction:column;
+}
+
+.nitnem_listX {
+  /*top:70px;*/
+  width:100%;
+  position:fixed;
+  display:flex;
+  flex-direction:column;
+}
+
+.list-item {
+  padding: 10px;
+  border-bottom: 2px Solid
+}
+
+
 .baaniFormatting {
   display: flex;
   justify-content: center;
