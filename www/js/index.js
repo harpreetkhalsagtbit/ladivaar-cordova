@@ -21,6 +21,7 @@ var app = {
     initialize: function() {
         this.bindEvents();
         $(document).ready(function() {
+            $("#nitnem_listX").css("display", "block");
 
 			$(".list-group-home .list-item").click(function(e) {
 				// $(".list-group-home").removeClass(" list-group-center")
@@ -79,7 +80,13 @@ var app = {
 
 					$(".main_screen_list").removeClass("list-group-center")
 					$(".tatkra_list").removeClass("list-group-right")
+                    $(".guru_granth_sahib_baani").removeClass("list-group-center")
 
+
+                    // handle both cases for back
+                    $(".tatkra_list").removeClass("list-group-left")
+
+                    $(".guru_granth_sahib_baani").addClass("list-group-right")
 					$(".main_screen_list").addClass("list-group-left")
 					$(".tatkra_list").addClass("list-group-center")
 
@@ -131,6 +138,7 @@ var app = {
                             ladivaarGenerator(_baani, $(".list-group-center-on-next"), false)
                             $('#angPositionFooter').html((ang + 1) + "/1430")
                         }
+                        $("nitnem_listX").show();
                         // showMe('srigurugranthsahib_ang')
                     }
                 }
