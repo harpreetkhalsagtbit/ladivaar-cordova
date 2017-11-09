@@ -21,8 +21,6 @@ var app = {
     initialize: function() {
         this.bindEvents();
         $(document).ready(function() {
-            $("#nitnem_listX").css("display", "block");
-
 			$(".list-group-home .list-item").click(function(e) {
 				// $(".list-group-home").removeClass(" list-group-center")
 				// $(".list-group-2").removeClass("list-group-right")
@@ -58,6 +56,10 @@ var app = {
             // $("[data-attr='srigurugranthsahib_ang']").hide()
             $(window).on('hashchange', function() {
             	console.log("haschange", window.location.hash)
+
+                // hack
+                $(".nitnem_listX").css("display", "none");
+
                 if (window.location.hash == "") {
                     // showMe('homeList')
                     // $(".headerTitle").html("Ladivaar.com")
@@ -138,7 +140,7 @@ var app = {
                             ladivaarGenerator(_baani, $(".list-group-center-on-next"), false)
                             $('#angPositionFooter').html((ang + 1) + "/1430")
                         }
-                        $("nitnem_listX").show();
+                        $(".nitnem_listX").show();
                         // showMe('srigurugranthsahib_ang')
                     }
                 }
