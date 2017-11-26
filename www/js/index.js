@@ -92,6 +92,8 @@ var app = {
 					$(".main_screen_list").addClass("list-group-left")
 					$(".tatkra_list").addClass("list-group-center")
 
+					$(".guru_granth_sahib_baani").css("display", "none")
+
                 } else if (window.location.hash == "#nitnem") {
                     // showMe('nitnem_tatkra')
                     // $(".headerTitle").html("ਨਿਤਨੇਮ")
@@ -121,6 +123,10 @@ var app = {
                     }
                     // showMe('nitnem_gurbani')
                 } else if (window.location.hash.match(/_ang_\d{1,4}/)) {
+                	setTimeout(function() {
+						$(".guru_granth_sahib_baani").css("display", "block")
+                	},1000)
+
 					$(".tatkra_list").removeClass("list-group-center")
 					$(".tatkra_list").addClass("list-group-left")
 
