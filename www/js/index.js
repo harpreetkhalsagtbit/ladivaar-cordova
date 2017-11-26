@@ -144,7 +144,8 @@ var app = {
                             var _baani = _angData.baani
                                 // baani_container
                             ladivaarGenerator(_baani, $(".list-group-center-on-next"), false)
-                            $('#angPositionFooter').html((ang + 1) + "/1430")
+							$("#angNo").html((ang + 1) + "/1430")
+                            // $('#angPositionFooter').html((ang + 1) + "/1430")
                         }
                         $(".nitnem_listX").show();
                         // showMe('srigurugranthsahib_ang')
@@ -327,6 +328,7 @@ resim.hammer().on("swipeleft", function(ev) {
             // baani_container
 	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
         ladivaarGenerator(_baani, center, false)
+		$("#angNo").html((window.angNo + 1) + "/1430")
 	}, 1000)
 
 
@@ -350,6 +352,7 @@ resim.hammer().on("swiperight", function(ev) {
 	        // baani_container
 	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
 	    ladivaarGenerator(_baani, center, false)
+		$("#angNo").html((window.angNo - 1) + "/1430")
 	}, 1000)
 });
 
