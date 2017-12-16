@@ -353,6 +353,8 @@ $('.goToAngModalChildWrapper').on('click', function(e){
 
 $("#goToButton").bind("click", function() {
 	var angNo = $("#goToAngText").val()
+	$("#goToAngText").val("")
+
 	if(angNo > 0 && angNo <= 1430) {
 		if(window.location.hash.match(/_ang_\d{1,4}/)) {
 	        window.location.hash = "srigurugranthsahibjee_ang_" + angNo;
