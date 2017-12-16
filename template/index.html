@@ -43,8 +43,26 @@
 <body>
     <div>
         <header>
+            <div class="">
+            </div>
             <div class="title">
                ਲੜੀਵਾਰ
+            </div>
+            <div class="hamburger_icon">
+            	<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+					 <g>
+						<circle fill="#ff8c00" id="svg_1" r="3" cy="12" cx="12"/>
+						<circle fill="#ff8c00" id="svg_2" r="3" cy="5" cx="12"/>
+						<circle fill="#ff8c00" id="svg_3" r="3" cy="19" cx="12"/>
+					 </g>
+				</svg>
+				<div class="menu">
+					<ul>
+						<li>
+							<p id="goTo" href="#">Go To Ang No.</p>
+						</li>
+					</ul>
+				</div>
             </div>
         </header>
         <div class="main">
@@ -105,10 +123,23 @@
         </div>
 		<footer>
 			<div class="angNoContainer">
-				<h1>ਅੰਗ - <span id="angNo"></span></h1>
+				<p><span id="angNo"></span></p>
 			</div>
 		</footer>
-
+		<div class="hideModal">
+			<div class="goToAngModalChildWrapper">
+				<div class="modal_header">ਲੜੀਵਾਰ</div>
+				<div class="modal_body">
+					<div class="label_select_ang">Select Ang No.</div>
+					<div>
+						<input type="number" id="goToAngText" step="1" min="1" max="1430" name="txtNumber"/>
+					</div>
+				</div>
+				<div class="modal_footer">
+					<button id="goToButton">Go</button>
+				</div>
+			</div>
+		</div>
     </div>
 
     <script type="text/javascript" src="js/jquery.min.js"></script>

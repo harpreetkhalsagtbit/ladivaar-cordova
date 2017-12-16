@@ -13,8 +13,6 @@ a {
 
 body {
     font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    font-style: normal;
     background-color: #33373B;
     color: white;
 }
@@ -36,12 +34,111 @@ header {
   height: 12%;
   display: flex;
   background-color:#33373B;
-  justify-content: center;
+  justify-content: space-between;
 
   -webkit-box-shadow: 0 4px 5px #242527;
   -moz-box-shadow: 0 4px 5px #242527;
   box-shadow: 0 4px 5px #242527;
 }
+
+.hamburger_icon {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  position: absolute;
+  border: 1px solid;
+  height: 30px;
+  background-color: white;
+  top: 50px;
+  color: black;
+  right: 15px;
+  z-index: 1000;
+}
+
+.menu ul li p {
+  padding: 5px;
+  font-size: 18px;
+  width: 100%;
+}
+
+.hideModal {
+  display: none;
+}
+
+.goToAngModalContainer {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width:100%;
+  background-color: rgba(128, 128, 128, 0.70);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.goToAngModalChildWrapper {
+  width: 80%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.modal_header {
+  background: #33373B;
+  width: 100%;
+  color: #ff8c00;
+  display: flex;
+  justify-content: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.modal_body {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.label_select_ang {
+  margin-right: 10px;
+}
+
+#goToAngText {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #33373B;
+}
+
+.modal_footer {
+  border-top: 1px solid #33373B;
+  width: 100%;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.modal_footer button{
+  width: 100px;
+  height: 30px;
+  background: #ff8c00;
+  border: none;
+  margin-right:5px;
+}
+
+
 
 /*header {
   height: 70px;
@@ -88,6 +185,7 @@ footer {
 .angNoContainer {
   display: flex;
   justify-content: center;
+  padding-top: 8px;
 }
 
 li {
@@ -97,11 +195,13 @@ li {
 li a {
   display: block;
   width:100%;
+  font-size: 24px;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 32px;
   align-self: center;
+  color: #ff8c00;
 }
 
 .list-group-center{
@@ -250,7 +350,7 @@ li a {
 
 .list-item {
   padding: 10px;
-  border-bottom: 2px Solid
+  border-bottom: 1px Solid
 }
 
 
@@ -258,7 +358,7 @@ li a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 5px;
 }
 
 .text-center {
@@ -268,11 +368,12 @@ li a {
 }
 
 p {
-  font-size: 18px;
+  font-size: 26px;
 }
 
 h1 {
   color: #168216;
+  font-size: 32px;
 }
 
 .highlightH1 {
@@ -281,6 +382,11 @@ h1 {
 
 .highlightP {
   color: #FF8C00;
+}
+
+#angNo {
+  font-size: 24px;
+  color: #ff8c00;
 }
 
 
