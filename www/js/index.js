@@ -335,7 +335,7 @@ $('a[data-slide="next"]').click(function() {
     }
 })
 
-$(".hamburger_icon").bind("click", function() {
+$(".menu_control").bind("click", function() {
 	$(".menu").show();
 })
 
@@ -352,8 +352,9 @@ $('.goToAngModalChildWrapper').on('click', function(e){
 });
 
 $("body").bind("click", function(evt) {
-    var regEx = /svg_/;
-    if(!regEx.test(evt.target.id)){
+    var regEx = /menu_control/;
+    var check = (evt.target && evt.target.className && evt.target.className.baseVal) || evt.target.className
+    if(!regEx.test(check)){
         $(".menu").hide();
     }
 });
