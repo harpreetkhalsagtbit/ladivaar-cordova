@@ -351,6 +351,12 @@ $('.goToAngModalChildWrapper').on('click', function(e){
     e.stopPropagation();
 });
 
+$("body").bind("click", function(evt) {
+    var regEx = /svg_/;
+    if(!regEx.test(evt.target.id)){
+        $(".menu").hide();
+    }
+});
 
 $("#goToButton").bind("click", function() {
 	var angNo = $("#goToAngText").val()
