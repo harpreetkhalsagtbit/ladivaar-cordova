@@ -470,7 +470,7 @@ resim.hammer().on("swiperight", function(ev) {
 	        // baani_container
 	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
 	    ladivaarGenerator(_baani, center, false)
-		$("#angNo").html("ਅੰਗ - " + (window.angNo - 1) + "/1430")
+		$("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
 	}, 1000)
 });
 
