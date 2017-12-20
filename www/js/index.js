@@ -166,8 +166,9 @@ var app = {
                             window.angNo = ang;
                             var _angData = data[ang];
                             var _baani = _angData.baani
-                                // baani_container
-                            ladivaarGenerator(_baani, $(".list-group-center-on-next"), false)
+                            // baani_container
+                            var center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
+                            ladivaarGenerator(_baani, center, false)
 							$("#angNo").html("ਅੰਗ - " + (ang + 1) + "/1430")
                             // $('#angPositionFooter').html((ang + 1) + "/1430")
                         }
