@@ -88,6 +88,10 @@ header {
   display: none;
 }
 
+.hideMenu {
+  display: none;
+}
+
 .goToAngModalContainer {
   position: fixed;
   top: 0px;

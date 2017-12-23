@@ -56,7 +56,9 @@ var app = {
 
 			// hack - to show hide modal on load
 			$(".hideModal").addClass("goToAngModalContainer").removeClass("hideModal");
-			$(".goToAngModalContainer").hide();
+			$(".hideMenu").removeClass("hideModal");
+
+            $(".goToAngModalContainer").hide();
 			$(".goToAngModalContainer").on("click", function(evt) {
 				evt.stopPropagation();
 				$(".goToAngModalContainer").hide();
@@ -65,6 +67,7 @@ var app = {
             // $("[data-attr='srigurugranthsahib_ang']").hide()
             $(window).on('hashchange', function() {
             	console.log("haschange", window.location.hash)
+                $(".goToAngModalContainer").hide();
 
                 // hack
                 $(".nitnem_listX").css("display", "none");
