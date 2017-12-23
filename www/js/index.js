@@ -144,6 +144,8 @@ var app = {
                         var _baani = nitnemBaani[_baaniName];
                         $(".title").html(nitnemBaniList[_baaniName])
                         ladivaarGenerator(_baani, $("#nitnem_baani_container"), true)
+                        $(".nitnem_baani_page").animate({ scrollTop: 0 }, "slow");
+
                     }
 					setTimeout(function() {
 						$(".menu").hide();
@@ -173,14 +175,15 @@ var app = {
                             var center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
                             ladivaarGenerator(_baani, center, false)
                             $(".title").html("ਅੰਗ - " + (ang + 1) + "/1430")
+                            // $("footer").show()
+
 							// $("#angNo").html("ਅੰਗ - " + (ang + 1) + "/1430")
                             // $('#angPositionFooter').html((ang + 1) + "/1430")
                         }
                         $(".nitnem_listX").show();
-			            // $("footer").show()
-						setTimeout(function() {
+                        setTimeout(function() {
 							$(".menu").hide();
-						}, 100)
+                        }, 100)
 
                         // showMe('srigurugranthsahib_ang')
                     }
@@ -287,7 +290,9 @@ function ladivaarGenerator(baani, element, singleNumber) {
         }
         _htmlString = "<div class='baaniFormatting'>" + _paragraphStringHTMLArr.join("</div><div class='baaniFormatting'>") + "</div>"
         $(element).html(_htmlString)
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+        setTimeout(function() {
+            $(element).animate({ scrollTop: 0 }, "slow");
+        }, 1000)
 
         // $("[data-attr='homeList']").hide();
         // $("[data-attr='tatkra']").hide()
@@ -455,6 +460,7 @@ resim.hammer().on("swipeleft", function(ev) {
 	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
         ladivaarGenerator(_baani, center, false)
         $(".title").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
+        
         // $("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
 	}, 600)
 
