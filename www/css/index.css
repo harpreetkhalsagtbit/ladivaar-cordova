@@ -56,6 +56,7 @@ header {
 {
   header {
     height: 15%;
+    padding-top: 5px;
   }
 }
 
@@ -219,6 +220,13 @@ header {
   flex-direction:column;
   width:100%;
   padding-bottom: 10px;
+}
+
+@media screen and (orientation: landscape)
+{
+  .main {
+    top:15%;
+  }
 }
 
 footer {
