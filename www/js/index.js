@@ -144,11 +144,12 @@ var app = {
                         var _baani = nitnemBaani[_baaniName];
                         $(".title").html(nitnemBaniList[_baaniName])
                         ladivaarGenerator(_baani, $("#nitnem_baani_container"), true)
-                        $(".nitnem_baani_page").animate({ scrollTop: 0 }, "slow");
-
+                        $(".nitnem_baani_page").scrollTop(0);
                     }
 					setTimeout(function() {
 						$(".menu").hide();
+                        $(".highlightH1").removeClass('highlightH1')
+                        $(".highlightP").removeClass('highlightP')
 					}, 100)
                     // showMe('nitnem_gurbani')
                 } else if (window.location.hash.match(/_ang_\d{1,4}/)) {
@@ -183,6 +184,8 @@ var app = {
                         $(".nitnem_listX").show();
                         setTimeout(function() {
 							$(".menu").hide();
+                            $(".highlightH1").removeClass('highlightH1')
+                            $(".highlightP").removeClass('highlightP')
                         }, 100)
 
                         // showMe('srigurugranthsahib_ang')
@@ -291,7 +294,7 @@ function ladivaarGenerator(baani, element, singleNumber) {
         _htmlString = "<div class='baaniFormatting'>" + _paragraphStringHTMLArr.join("</div><div class='baaniFormatting'>") + "</div>"
         $(element).html(_htmlString)
         setTimeout(function() {
-            $(element).animate({ scrollTop: 0 }, "slow");
+            $(element).scrollTop(0);
         }, 1000)
 
         // $("[data-attr='homeList']").hide();
