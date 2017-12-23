@@ -77,6 +77,16 @@ var app = {
                     $(".main_screen_list").removeClass("list-group-left")
                     $(".tatkra_list").removeClass("list-group-center")  
 
+                    // hack by harpreet to reset when back pressed multiple times
+                    // from nitnem_bani page and gurbani page
+                    $(".main_screen_list").removeClass("list-group-center")
+					$(".nitnem_list").removeClass("list-group-right")
+					$(".nitnem_list").removeClass("list-group-left")
+					$(".nitnem_baani_page").removeClass("list-group-center")
+					$(".nitnem_baani_page").addClass("list-group-right")
+                    $(".guru_granth_sahib_baani").removeClass("list-group-center")
+                    $(".guru_granth_sahib_baani").addClass("list-group-right")
+
                     // handle both cases for back
                     $(".main_screen_list").addClass("list-group-center")
                     $(".tatkra_list").addClass("list-group-right")
@@ -148,8 +158,8 @@ var app = {
                     }
 					setTimeout(function() {
 						$(".menu").hide();
-                        $(".highlightH1").removeClass('highlightH1')
-                        $(".highlightP").removeClass('highlightP')
+                        // $(".highlightH1").removeClass('highlightH1')
+                        // $(".highlightP").removeClass('highlightP')
 					}, 100)
                     // showMe('nitnem_gurbani')
                 } else if (window.location.hash.match(/_ang_\d{1,4}/)) {
