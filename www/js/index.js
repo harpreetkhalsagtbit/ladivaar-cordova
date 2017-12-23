@@ -51,7 +51,7 @@ var app = {
 				$(".list-group-2").addClass("list-group-right")
 			})
 
-			$("footer").hide()
+			// $("footer").hide()
 			$(".menu").hide();
 
 			// hack - to show hide modal on load
@@ -83,7 +83,8 @@ var app = {
 
 					$(".main_screen_list").addClass("list-group-center")
 					$(".nitnem_list").addClass("list-group-right")
-		            $("footer").hide()
+					$(".title").html("ਲੜੀਵਾਰ")
+		            // $("footer").hide()
 		            setTimeout(function() {
 		            	$(".menu").hide();
 		            }, 100)
@@ -106,8 +107,8 @@ var app = {
 					$(".tatkra_list").addClass("list-group-center")
 
 					$(".guru_granth_sahib_baani").css("display", "none")
-		            $("footer").show()
-					$("#angNo").html("ਤਤਕਰਾ ਰਾਗਾਂ ਕਾ")
+		            // $("footer").show()
+					$(".title").html("ਤਤਕਰਾ ਰਾਗਾਂ ਕਾ")
 					setTimeout(function() {
 						$(".menu").hide();
 					}, 100)
@@ -125,6 +126,7 @@ var app = {
 					$(".main_screen_list").addClass("list-group-left")
 					$(".nitnem_list").addClass("list-group-center")
 					$(".nitnem_baani_page").addClass("list-group-right")
+					$(".title").html("ਨਿਤਨੇਮ")
 					setTimeout(function() {
 						$(".menu").hide();
 					}, 100)
@@ -169,11 +171,12 @@ var app = {
                             // baani_container
                             var center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
                             ladivaarGenerator(_baani, center, false)
-							$("#angNo").html("ਅੰਗ - " + (ang + 1) + "/1430")
+                            $(".title").html("ਅੰਗ - " + (ang + 1) + "/1430")
+							// $("#angNo").html("ਅੰਗ - " + (ang + 1) + "/1430")
                             // $('#angPositionFooter').html((ang + 1) + "/1430")
                         }
                         $(".nitnem_listX").show();
-			            $("footer").show()
+			            // $("footer").show()
 						setTimeout(function() {
 							$(".menu").hide();
 						}, 100)
@@ -302,38 +305,6 @@ function showMe(me) {
     }
     $("[data-attr='" + me + "']").show()
 }
-
-var ang = 1
-var click = ""
-$('#carousel-example-generic').on('slide.bs.carousel', function() {
-    setTimeout(function() {
-        var _angData = data[ang];
-        if (_angData) {
-            var _baani = _angData.baani
-                // baani_container
-            ladivaarGenerator(_baani, $(".active [data-content]"), false)
-            // jQuery("div.item.active [data-content]").html(demo_data[ang-1]["content"])
-            jQuery("div.item:not(.active) [data-content]").html("")
-        }
-        $('#angPositionFooter').html((ang + 1) + "/1430")
-    }, 1000)
-})
-
-// jQuery(".active [data-content]").html(da[0]["content"])
-
-$('a[data-slide="prev"]').click(function() {
-    if (ang > 0) {
-        ang = ang - 1
-    }
-})
-
-$('a[data-slide="next"]').click(function() {
-    if (ang == data.length) {
-        ang = 1
-    } else {
-        ang = ang + 1
-    }
-})
 
 $(".menu_control").bind("click", function() {
     $(".menu").show();
@@ -471,7 +442,8 @@ resim.hammer().on("swipeleft", function(ev) {
             // baani_container
 	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
         ladivaarGenerator(_baani, center, false)
-		$("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
+        $(".title").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
+        // $("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
 	}, 1000)
 
 
@@ -495,7 +467,8 @@ resim.hammer().on("swiperight", function(ev) {
 	        // baani_container
 	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
 	    ladivaarGenerator(_baani, center, false)
-		$("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
+        $(".title").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
+		// $("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
 	}, 1000)
 });
 
