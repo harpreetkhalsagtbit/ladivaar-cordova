@@ -142,6 +142,7 @@ var app = {
                     if (_res.length) {
                         var _baaniName = _res[1]
                         var _baani = nitnemBaani[_baaniName];
+                        $(".title").html(nitnemBaniList[_baaniName])
                         ladivaarGenerator(_baani, $("#nitnem_baani_container"), true)
                     }
 					setTimeout(function() {
@@ -232,6 +233,16 @@ var app = {
 };
 
 app.initialize();
+
+var nitnemBaniList = {
+    "japjeesahib": "ਜਪੁਜੀ ਸਾਹਿਬ",
+    "jaapsahib": "ਜਾਪੁ ਸਾਹਿਬ",
+    "tavprasadsavaiye": "ਤ੍ਵ ਪ੍ਰਸਾਦਿ ਸ੍ਵਯੇ",
+    "chaupaisahib": "ਚੌਪਈ ਸਾਹਿਬ",
+    "anandsahib": "ਅਨੰਦੁ ਸਾਹਿਬ",
+    "rehrassahib": "ਰਹਰਾਸਿ ਸਾਹਿਬ",
+    "sohilasahib":"ਸੋਹਿਲਾ ਸਾਹਿਬ"
+}
 
 function ladivaarGenerator(baani, element, singleNumber) {
     $('h1 span').unbind("mouseover");
@@ -338,9 +349,8 @@ $("#goToButton").bind("click", function() {
 		if(window.location.hash.match(/_ang_\d{1,4}/)) {
 	        window.location.hash = "srigurugranthsahibjee_ang_" + angNo;
 		} else if(window.location.hash.match(/nitnem_/)) {
-			$(".main_screen_list").hide()
-			$(".nitnem_list").hide()
-			$(".nitnem_baani_page").hide()
+			$(".main").hide()
+			$(".title").hide()
 
 	        setTimeout(function() {
 	        	window.location.hash = "nitnem";
@@ -350,10 +360,11 @@ $("#goToButton").bind("click", function() {
 			        	window.location.hash = "srigurugranthsahibjee";
 				        setTimeout(function() {
 					        window.location.hash = "srigurugranthsahibjee_ang_" + angNo;
-					        $(".main_screen_list").show()
-					        $(".nitnem_list").show()
-					        $(".nitnem_baani_page").show()
-
+                            $(".main_screen_list").show()
+                            setTimeout(function() {
+                                $(".main").show()
+                                $(".title").show()                    
+                            }, 300);
 				        }, 300)
 			        }, 300)
 
@@ -385,6 +396,7 @@ $("#goToButton").bind("click", function() {
 		        }, 300)
 	        }, 300)
 		}
+        // window.location.hash = "srigurugranthsahibjee_ang_" + angNo;
 		$(".goToAngModalContainer").hide();
 	}
 })
@@ -444,7 +456,7 @@ resim.hammer().on("swipeleft", function(ev) {
         ladivaarGenerator(_baani, center, false)
         $(".title").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
         // $("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
-	}, 1000)
+	}, 600)
 
 
 });
@@ -469,6 +481,6 @@ resim.hammer().on("swiperight", function(ev) {
 	    ladivaarGenerator(_baani, center, false)
         $(".title").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
 		// $("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
-	}, 1000)
+	}, 600)
 });
 

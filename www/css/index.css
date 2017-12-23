@@ -321,32 +321,32 @@ li a {
 
 .list-group-center-on-next{
     transform:translateX(0%);
-    transition: all ease 0.8s;
+    transition: all ease 0.6s;
 }
 
 .list-group-left-on-next{
     transform:translateX(-100%);
-    transition: all ease 0.8s;
+    transition: all ease 0.6s;
 }
 
 .list-group-right-on-next{
     transform:translateX(100%);
-/*     transition: all ease 0.8s; */
+/*     transition: all ease 0.6s; */
 }
 
 .list-group-center-on-prev{
     transform:translateX(0%);
-    transition: all ease 0.8s;
+    transition: all ease 0.6s;
 }
 
 .list-group-left-on-prev{
     transform:translateX(-100%);
-/*     transition: all ease 0.8s; */
+/*     transition: all ease 0.6s; */
 }
 
 .list-group-right-on-prev{
     transform:translateX(100%);
-    transition: all ease 0.8s;
+    transition: all ease 0.6s;
 }
 
 
