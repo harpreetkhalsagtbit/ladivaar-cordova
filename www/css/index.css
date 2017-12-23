@@ -37,7 +37,7 @@ header {
   position: fixed;
   top:0%;
   width:100%;
-  height: 12%;
+  height: 10%;
   display: flex;
   background-color:#1b1c1d;
   justify-content: space-between;
@@ -51,27 +51,44 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  width: 30px;
 }
 
 .menu {
   position: absolute;
   border: 1px solid;
   height: 30px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #242527;
+  border-radius:10px;
   top: 50px;
-  color: black;
   right: 15px;
   z-index: 1000;
 }
 
 .menu ul li p {
-  padding: 5px;
+  padding: 4px;
   font-size: 18px;
   width: 100%;
 }
 
+.iOS_navigation {
+  display: flex;
+  align-items: center;
+}
+
+
+.iOS_navigation p {
+  font-size: 40px;
+  align-self: center;
+  color: #ff8c00;
+}
+
 .hideModal {
+  display: none;
+}
+
+.hideMenu {
   display: none;
 }
 
@@ -81,7 +98,7 @@ header {
   left: 0px;
   height: 100%;
   width:100%;
-  background-color: rgba(128, 128, 128, 0.70);
+  background-color: rgba(128, 128, 128, 0.8);
   z-index: 100;
   display: flex;
   justify-content: center;
@@ -91,9 +108,10 @@ header {
 
 .goToAngModalChildWrapper {
   width: 80%;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
+  align-items: center;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -117,36 +135,49 @@ header {
 }
 
 .label_select_ang {
-  margin-right: 10px;
+  padding: 10px;
+  color: #242527;
 }
 
 #goToAngText {
-  border-top: none;
+  width: 200px;
+  padding: 5px;
+  color: #242527;
+  border: 2px solid rgba(187, 184, 184, 0.2);
+/*  border-top: none;
   border-left: none;
   border-right: none;
   border-bottom-color: #1b1c1d;
-}
+*/}
 
 .modal_footer {
-  border-top: 1px solid #1b1c1d;
+  margin-top: 10px;
+  border-top: 2px solid rgba(78, 78, 78, 0.4);
   width: 100%;
   display: flex;
   height: 40px;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 .modal_footer button{
-  width: 100px;
-  height: 30px;
-  background: #ff8c00;
+  width: 100%;
+  height: 40px;
+  color: #242527;
   border: none;
-  margin-right:5px;
+  background: none;
+  font-size: 15px;
 }
 
+#cancel {
+  border-right: 1px solid rgba(78, 78, 78, 0.4);
+}
 
+#goToButton {
+  border-left: 1px solid rgba(78, 78, 78, 0.4);
+}
 
 /*header {
   height: 70px;
@@ -170,11 +201,12 @@ header {
 */
 .main {
   position: fixed;
-  height: 80%;
+  height: 90%;
   top:12%;
   display:flex;
   flex-direction:column;
   width:100%;
+  padding-bottom: 10px;
 }
 
 footer {
@@ -294,32 +326,32 @@ li a {
 
 .list-group-center-on-next{
     transform:translateX(0%);
-    transition: all ease 0.8s;
+    transition: all ease 0.6s;
 }
 
 .list-group-left-on-next{
     transform:translateX(-100%);
-    transition: all ease 0.8s;
+    transition: all ease 0.6s;
 }
 
 .list-group-right-on-next{
     transform:translateX(100%);
-/*     transition: all ease 0.8s; */
+/*     transition: all ease 0.6s; */
 }
 
 .list-group-center-on-prev{
     transform:translateX(0%);
-    transition: all ease 0.8s;
+    transition: all ease 0.6s;
 }
 
 .list-group-left-on-prev{
     transform:translateX(-100%);
-/*     transition: all ease 0.8s; */
+/*     transition: all ease 0.6s; */
 }
 
 .list-group-right-on-prev{
     transform:translateX(100%);
-    transition: all ease 0.8s;
+    transition: all ease 0.6s;
 }
 
 

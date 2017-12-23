@@ -51,12 +51,14 @@ var app = {
 				$(".list-group-2").addClass("list-group-right")
 			})
 
-			$("footer").hide()
+			// $("footer").hide()
 			$(".menu").hide();
 
 			// hack - to show hide modal on load
 			$(".hideModal").addClass("goToAngModalContainer").removeClass("hideModal");
-			$(".goToAngModalContainer").hide();
+			$(".hideMenu").removeClass("hideModal");
+
+            $(".goToAngModalContainer").hide();
 			$(".goToAngModalContainer").on("click", function(evt) {
 				evt.stopPropagation();
 				$(".goToAngModalContainer").hide();
@@ -65,6 +67,7 @@ var app = {
             // $("[data-attr='srigurugranthsahib_ang']").hide()
             $(window).on('hashchange', function() {
             	console.log("haschange", window.location.hash)
+                $(".goToAngModalContainer").hide();
 
                 // hack
                 $(".nitnem_listX").css("display", "none");
@@ -77,13 +80,24 @@ var app = {
                     $(".main_screen_list").removeClass("list-group-left")
                     $(".tatkra_list").removeClass("list-group-center")  
 
+                    // hack by harpreet to reset when back pressed multiple times
+                    // from nitnem_bani page and gurbani page
+                    $(".main_screen_list").removeClass("list-group-center")
+					$(".nitnem_list").removeClass("list-group-right")
+					$(".nitnem_list").removeClass("list-group-left")
+					$(".nitnem_baani_page").removeClass("list-group-center")
+					$(".nitnem_baani_page").addClass("list-group-right")
+                    $(".guru_granth_sahib_baani").removeClass("list-group-center")
+                    $(".guru_granth_sahib_baani").addClass("list-group-right")
+
                     // handle both cases for back
                     $(".main_screen_list").addClass("list-group-center")
                     $(".tatkra_list").addClass("list-group-right")
 
 					$(".main_screen_list").addClass("list-group-center")
 					$(".nitnem_list").addClass("list-group-right")
-		            $("footer").hide()
+					$(".title").html("ਲੜੀਵਾਰ")
+		            // $("footer").hide()
 		            setTimeout(function() {
 		            	$(".menu").hide();
 		            }, 100)
@@ -106,8 +120,8 @@ var app = {
 					$(".tatkra_list").addClass("list-group-center")
 
 					$(".guru_granth_sahib_baani").css("display", "none")
-		            $("footer").show()
-					$("#angNo").html("ਤਤਕਰਾ ਰਾਗਾਂ ਕਾ")
+		            // $("footer").show()
+					$(".title").html("ਤਤਕਰਾ ਰਾਗਾਂ ਕਾ")
 					setTimeout(function() {
 						$(".menu").hide();
 					}, 100)
@@ -125,6 +139,7 @@ var app = {
 					$(".main_screen_list").addClass("list-group-left")
 					$(".nitnem_list").addClass("list-group-center")
 					$(".nitnem_baani_page").addClass("list-group-right")
+					$(".title").html("ਨਿਤਨੇਮ")
 					setTimeout(function() {
 						$(".menu").hide();
 					}, 100)
@@ -140,10 +155,14 @@ var app = {
                     if (_res.length) {
                         var _baaniName = _res[1]
                         var _baani = nitnemBaani[_baaniName];
+                        $(".title").html(nitnemBaniList[_baaniName])
                         ladivaarGenerator(_baani, $("#nitnem_baani_container"), true)
+                        $(".nitnem_baani_page").scrollTop(0);
                     }
 					setTimeout(function() {
 						$(".menu").hide();
+                        // $(".highlightH1").removeClass('highlightH1')
+                        // $(".highlightP").removeClass('highlightP')
 					}, 100)
                     // showMe('nitnem_gurbani')
                 } else if (window.location.hash.match(/_ang_\d{1,4}/)) {
@@ -169,14 +188,18 @@ var app = {
                             // baani_container
                             var center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
                             ladivaarGenerator(_baani, center, false)
-							$("#angNo").html("ਅੰਗ - " + (ang + 1) + "/1430")
+                            $(".title").html("ਅੰਗ - " + (ang + 1) + "/1430")
+                            // $("footer").show()
+
+							// $("#angNo").html("ਅੰਗ - " + (ang + 1) + "/1430")
                             // $('#angPositionFooter').html((ang + 1) + "/1430")
                         }
                         $(".nitnem_listX").show();
-			            $("footer").show()
-						setTimeout(function() {
+                        setTimeout(function() {
 							$(".menu").hide();
-						}, 100)
+                            $(".highlightH1").removeClass('highlightH1')
+                            $(".highlightP").removeClass('highlightP')
+                        }, 100)
 
                         // showMe('srigurugranthsahib_ang')
                     }
@@ -230,6 +253,16 @@ var app = {
 
 app.initialize();
 
+var nitnemBaniList = {
+    "japjeesahib": "ਜਪੁਜੀ ਸਾਹਿਬ",
+    "jaapsahib": "ਜਾਪੁ ਸਾਹਿਬ",
+    "tavprasadsavaiye": "ਤ੍ਵ ਪ੍ਰਸਾਦਿ ਸ੍ਵਯੇ",
+    "chaupaisahib": "ਚੌਪਈ ਸਾਹਿਬ",
+    "anandsahib": "ਅਨੰਦੁ ਸਾਹਿਬ",
+    "rehrassahib": "ਰਹਰਾਸਿ ਸਾਹਿਬ",
+    "sohilasahib":"ਸੋਹਿਲਾ ਸਾਹਿਬ"
+}
+
 function ladivaarGenerator(baani, element, singleNumber) {
     $('h1 span').unbind("mouseover");
     $('h1 span').unbind("mouseout");
@@ -273,7 +306,9 @@ function ladivaarGenerator(baani, element, singleNumber) {
         }
         _htmlString = "<div class='baaniFormatting'>" + _paragraphStringHTMLArr.join("</div><div class='baaniFormatting'>") + "</div>"
         $(element).html(_htmlString)
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+        setTimeout(function() {
+            $(element).scrollTop(0);
+        }, 1000)
 
         // $("[data-attr='homeList']").hide();
         // $("[data-attr='tatkra']").hide()
@@ -303,40 +338,8 @@ function showMe(me) {
     $("[data-attr='" + me + "']").show()
 }
 
-var ang = 1
-var click = ""
-$('#carousel-example-generic').on('slide.bs.carousel', function() {
-    setTimeout(function() {
-        var _angData = data[ang];
-        if (_angData) {
-            var _baani = _angData.baani
-                // baani_container
-            ladivaarGenerator(_baani, $(".active [data-content]"), false)
-            // jQuery("div.item.active [data-content]").html(demo_data[ang-1]["content"])
-            jQuery("div.item:not(.active) [data-content]").html("")
-        }
-        $('#angPositionFooter').html((ang + 1) + "/1430")
-    }, 1000)
-})
-
-// jQuery(".active [data-content]").html(da[0]["content"])
-
-$('a[data-slide="prev"]').click(function() {
-    if (ang > 0) {
-        ang = ang - 1
-    }
-})
-
-$('a[data-slide="next"]').click(function() {
-    if (ang == data.length) {
-        ang = 1
-    } else {
-        ang = ang + 1
-    }
-})
-
 $(".menu_control").bind("click", function() {
-	$(".menu").show();
+    $(".menu").show();
 })
 
 $("#goTo").bind("click", function() {
@@ -367,9 +370,8 @@ $("#goToButton").bind("click", function() {
 		if(window.location.hash.match(/_ang_\d{1,4}/)) {
 	        window.location.hash = "srigurugranthsahibjee_ang_" + angNo;
 		} else if(window.location.hash.match(/nitnem_/)) {
-			$(".main_screen_list").hide()
-			$(".nitnem_list").hide()
-			$(".nitnem_baani_page").hide()
+			$(".main").hide()
+			$(".title").hide()
 
 	        setTimeout(function() {
 	        	window.location.hash = "nitnem";
@@ -379,10 +381,11 @@ $("#goToButton").bind("click", function() {
 			        	window.location.hash = "srigurugranthsahibjee";
 				        setTimeout(function() {
 					        window.location.hash = "srigurugranthsahibjee_ang_" + angNo;
-					        $(".main_screen_list").show()
-					        $(".nitnem_list").show()
-					        $(".nitnem_baani_page").show()
-
+                            $(".main_screen_list").show()
+                            setTimeout(function() {
+                                $(".main").show()
+                                $(".title").show()                    
+                            }, 300);
 				        }, 300)
 			        }, 300)
 
@@ -414,6 +417,7 @@ $("#goToButton").bind("click", function() {
 		        }, 300)
 	        }, 300)
 		}
+        // window.location.hash = "srigurugranthsahibjee_ang_" + angNo;
 		$(".goToAngModalContainer").hide();
 	}
 })
@@ -425,6 +429,23 @@ $('#goToAngButton').click(function() {
     }
     $('#myModal').modal('hide');
     $("#goToAngTextBox").val("")
+})
+
+$("#cancel").on("click", function() {
+    $(".goToAngModalContainer").hide();
+    $("#goToAngText").val("")
+})
+
+$(".iOS_navigation").on("click", function() {
+    if (window.location.hash.match(/_ang_\d{1,4}/)) {
+        window.location.hash = "srigurugranthsahibjee"
+    } else if(window.location.hash.match(/nitnem_.*/)) {
+        window.location.hash = "nitnem"
+    } else if(window.location.hash.match(/nitnem/)) {
+        window.location.hash = ""
+    } else if(window.location.hash.match(/srigurugranthsahibjee/)) {
+        window.location.hash = ""
+    }  
 })
 
 function minmax(value, min, max) {
@@ -454,8 +475,10 @@ resim.hammer().on("swipeleft", function(ev) {
             // baani_container
 	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
         ladivaarGenerator(_baani, center, false)
-		$("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
-	}, 1000)
+        $(".title").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
+        
+        // $("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
+	}, 600)
 
 
 });
@@ -478,7 +501,8 @@ resim.hammer().on("swiperight", function(ev) {
 	        // baani_container
 	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
 	    ladivaarGenerator(_baani, center, false)
-		$("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
-	}, 1000)
+        $(".title").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
+		// $("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
+	}, 600)
 });
 
