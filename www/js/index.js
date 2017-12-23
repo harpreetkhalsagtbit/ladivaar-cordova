@@ -336,7 +336,7 @@ $('a[data-slide="next"]').click(function() {
 })
 
 $(".menu_control").bind("click", function() {
-	$(".menu").show();
+    $(".menu").show();
 })
 
 $("#goTo").bind("click", function() {
@@ -425,6 +425,23 @@ $('#goToAngButton').click(function() {
     }
     $('#myModal').modal('hide');
     $("#goToAngTextBox").val("")
+})
+
+$("#cancel").on("click", function() {
+    $(".goToAngModalContainer").hide();
+    $("#goToAngText").val("")
+})
+
+$(".iOS_navigation").on("click", function() {
+    if (window.location.hash.match(/_ang_\d{1,4}/)) {
+        window.location.hash = "srigurugranthsahibjee"
+    } else if(window.location.hash.match(/nitnem_.*/)) {
+        window.location.hash = "nitnem"
+    } else if(window.location.hash.match(/nitnem/)) {
+        window.location.hash = ""
+    } else if(window.location.hash.match(/srigurugranthsahibjee/)) {
+        window.location.hash = ""
+    }  
 })
 
 function minmax(value, min, max) {

@@ -43,7 +43,12 @@
 <body>
     <div>
         <header>
-            <div class="">
+            <div class="iOS_navigation">
+				<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+					<g transform="scale(0.09)">
+						<polygon fill="#ff8c00" id="svg_1" points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "/>
+					</g>
+				</svg>
             </div>
             <div class="title">
                ਲੜੀਵਾਰ
@@ -55,6 +60,7 @@
 						<circle class="menu_control" fill="#ff8c00" id="svg_2" r="3" cy="5" cx="12"/>
 						<circle class="menu_control" fill="#ff8c00" id="svg_3" r="3" cy="19" cx="12"/>
 					 </g>
+				</svg>
 				</svg>
 				<div class="menu">
 					<ul>
@@ -419,14 +425,12 @@
 		</footer>
 		<div class="hideModal">
 			<div class="goToAngModalChildWrapper">
-				<div class="modal_header">ਲੜੀਵਾਰ</div>
-				<div class="modal_body">
-					<div class="label_select_ang">Select Ang No.</div>
-					<div>
-						<input type="number" id="goToAngText" step="1" min="1" max="1430" name="txtNumber"/>
-					</div>
+				<div class="label_select_ang">Enter Ang No.</div>
+				<div>
+					<input type="number" id="goToAngText" step="1" min="1" max="1430" name="txtNumber"/>
 				</div>
 				<div class="modal_footer">
+					<button id="cancel">Cancel</button>
 					<button id="goToButton">Go</button>
 				</div>
 			</div>
