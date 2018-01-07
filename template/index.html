@@ -29,15 +29,17 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 <!--     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <title>Ladivaar App</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet/less" type="text/css" href="css/index.less" />
+	<title>Ladivaar App</title>
 </head>
 
 <body>
@@ -65,7 +67,10 @@
 				<div class="hideMenu menu">
 					<ul>
 						<li>
-							<p id="goTo" href="#">Go To Ang No.</p>
+							<p class="menuItem" id="goTo" href="#">Go To Ang No.</p>
+						</li>
+						<li>
+							<p class="menuItem" id="settings" href="#">Settings</p>
 						</li>
 					</ul>
 				</div>
@@ -144,12 +149,45 @@
 				</div>
 			</div>
 		</div>
-    </div>
+		<div class="hideModalSettings">
+			<div class="settingsModalChildWrapper">
+				<div class="labelSettings">Theme</div>
+				<div class="optionsItems">
+					<ul>
+						<li>
+							<label><input type="radio" name="optionThemeInput" value="0" checked> <span></span>Default</label>
+						</li>
+						<li>
+							<label><input type="radio" name="optionThemeInput" value="1"> <span></span>Cassandra</label>
+						</li>
+					</ul>
+				</div>
+				<div class="labelSettings">Font Size</div>
+				<div class="optionsItems">
+					<ul>
+						<li>
+							<label><input type="radio" name="optionFontSizeInput" value="4"> <span></span>Huge</label>
+						</li>
+						<li>
+							<label><input type="radio" name="optionFontSizeInput" value="3"> <span></span>Large</label>
+						</li>
+						<li>
+							<label><input type="radio" name="optionFontSizeInput" value="2" checked> <span></span>Medium</label>
+						</li>
+						<li>
+							<label><input type="radio" name="optionFontSizeInput" value="1"> <span></span>Small</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+	</div>
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/hammer.min.js"></script>
     <script type="text/javascript" src="js/jquery.hammer.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/less.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/output.js"></script>
     <script type="text/javascript" src="js/nitnem.js"></script>

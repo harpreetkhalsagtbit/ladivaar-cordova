@@ -58,16 +58,26 @@ var app = {
 			$(".hideModal").addClass("goToAngModalContainer").removeClass("hideModal");
 			$(".hideMenu").removeClass("hideModal");
 
+			$(".hideModalSettings").addClass("settingsModalContainer").removeClass("hideModalSettings");
+			$(".hideMenu").removeClass("hideModalSettings");
+
             $(".goToAngModalContainer").hide();
 			$(".goToAngModalContainer").on("click", function(evt) {
 				evt.stopPropagation();
 				$(".goToAngModalContainer").hide();
 			})
 
+            $(".settingsModalContainer").hide();
+			$(".settingsModalContainer").on("click", function(evt) {
+				evt.stopPropagation();
+				$(".settingsModalContainer").hide();
+			})
+
             // $("[data-attr='srigurugranthsahib_ang']").hide()
             $(window).on('hashchange', function() {
             	console.log("haschange", window.location.hash)
                 $(".goToAngModalContainer").hide();
+                $(".settingsModalContainer").hide();
 
                 // hack
                 $(".nitnem_listX").css("display", "none");
@@ -188,7 +198,7 @@ var app = {
                             // baani_container
                             var center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
                             ladivaarGenerator(_baani, center, false)
-                            $(".title").html("ਅੰਗ - " + (ang + 1) + "/1430")
+                            $(".title").html((ang + 1) + "/1430")
                             // $("footer").show()
 
 							// $("#angNo").html("ਅੰਗ - " + (ang + 1) + "/1430")
@@ -262,6 +272,20 @@ var nitnemBaniList = {
     "rehrassahib": "ਰਹਰਾਸਿ ਸਾਹਿਬ",
     "sohilasahib":"ਸੋਹਿਲਾ ਸਾਹਿਬ"
 }
+
+var themes = [{
+    "@backgroundColor":"#171233",
+    "@primaryColor":"#C9A758",
+    "@secondaryColor":"#49B8D1",
+    "@highlightPrimary":"#f9f8f8",
+    "@highlightSecondary":"#f9f8f8"
+}, {
+    "@backgroundColor":"#32313B",
+    "@primaryColor":"#EC3F8C",
+    "@secondaryColor":"#39B1C6",
+    "@highlightPrimary":"#f9f8f8",
+    "@highlightSecondary":"#f9f8f8"
+}]
 
 function ladivaarGenerator(baani, element, singleNumber) {
     $('h1 span').unbind("mouseover");
@@ -349,7 +373,19 @@ $("#goTo").bind("click", function() {
 	$(".goToAngModalContainer").show();
 })
 
+$("#settings").bind("click", function() {
+	setTimeout(function() {
+		$(".menu").hide();
+	}, 100)
+	$(".settingsModalContainer").show();
+})
+
 $('.goToAngModalChildWrapper').on('click', function(e){
+    // stop the event from bubbling.
+    e.stopPropagation();
+});
+
+$('.settingsModalChildWrapper').on('click', function(e){
     // stop the event from bubbling.
     e.stopPropagation();
 });
@@ -419,6 +455,7 @@ $("#goToButton").bind("click", function() {
 		}
         // window.location.hash = "srigurugranthsahibjee_ang_" + angNo;
 		$(".goToAngModalContainer").hide();
+		$(".settingsModalContainer").hide();
 	}
 })
 
@@ -448,6 +485,13 @@ $(".iOS_navigation").on("click", function() {
     }  
 })
 
+$('input[name="optionThemeInput"]').on('change', function(e) {
+    console.log(e.type, $(this).val());
+    var themeIndex = $(this).val();
+    console.log(themes[themeIndex])
+    less.modifyVars(themes[themeIndex]);
+});
+
 function minmax(value, min, max) {
     if (parseInt(value) < min || isNaN(value))
         return 0;
@@ -475,7 +519,7 @@ resim.hammer().on("swipeleft", function(ev) {
             // baani_container
 	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
         ladivaarGenerator(_baani, center, false)
-        $(".title").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
+        $(".title").html((window.angNo + 1) + "/1430")
         
         // $("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
 	}, 600)
@@ -501,7 +545,7 @@ resim.hammer().on("swiperight", function(ev) {
 	        // baani_container
 	    let center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
 	    ladivaarGenerator(_baani, center, false)
-        $(".title").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
+        $(".title").html((window.angNo + 1) + "/1430")
 		// $("#angNo").html("ਅੰਗ - " + (window.angNo + 1) + "/1430")
 	}, 600)
 });
