@@ -10,7 +10,10 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		shell: {
 			start_cordova_browser: {
-				command: 'cordova run browser'
+				command: 'cordova run browser --target=chrome'
+			},
+			compile_less: {
+				command: 'lessc www/css/index.less www/css/index.css '
 			}
 		}
 	});
@@ -251,7 +254,8 @@ module.exports = function(grunt) {
 	require('load-grunt-tasks')(grunt);
 
 	// Default task(s).
-	// grunt.registerTask('default', ['generateHTML', 'shell:start_cordova_browser']);
+	// grunt.registerTask('default', ['shell:compile_less', 'generateHTML', 'shell:start_cordova_browser']);
 	grunt.registerTask('run', ['shell:start_cordova_browser']);
-	grunt.registerTask('default', ['generateHTML']);
+	// grunt.registerTask('default', ['generateHTML']);
+	grunt.registerTask('default', ['shell:compile_less', 'generateHTML', 'shell:start_cordova_browser']);
 };
