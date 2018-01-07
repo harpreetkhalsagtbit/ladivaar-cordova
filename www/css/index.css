@@ -40,9 +40,9 @@ header {
   background-color: #171233;
   justify-content: space-between;
   z-index: 100;
-  -webkit-box-shadow: 0 4px 5px #32313B;
-  -moz-box-shadow: 0 4px 5px #32313B;
-  box-shadow: 0 4px 5px #32313B;
+  -webkit-box-shadow: 0 2px 5px #C9A758;
+  -moz-box-shadow: 0 2px 5px #C9A758;
+  box-shadow: 0 2px 5px #C9A758;
 }
 @media screen and (orientation: portrait) {
   header {

@@ -312,8 +312,8 @@ var themes = [{
     "@backgroundColor":"#f3f2e0",
     "@primaryColor":"#8e254a",
     "@secondaryColor":"#57792d",
-    "@highlightPrimary":"#fefbb4",
-    "@highlightSecondary":"#fefbb4"
+    "@highlightPrimary":"#57792d",
+    "@highlightSecondary":"#8e254a"
 }, {
     "@backgroundColor":"#E6DABB",
     "@primaryColor":"#E25821",
@@ -367,7 +367,7 @@ function ladivaarGenerator(baani, element, singleNumber) {
         $(element).html(_htmlString)
         setTimeout(function() {
             $(element).scrollTop(0);
-        }, 1000)
+        }, 100)
 
         // $("[data-attr='homeList']").hide();
         // $("[data-attr='tatkra']").hide()
