@@ -21,6 +21,23 @@ var app = {
     initialize: function() {
         this.bindEvents();
         $(document).ready(function() {
+            if (typeof localStorage !== 'undefined') {
+                try {
+                    localStorage.setItem('feature_test', 'yes');
+                    if (localStorage.getItem('feature_test') === 'yes') {
+                        var user_theme = localStorage.getItem('theme');
+                        less.modifyVars(themes[user_theme]);
+                        // localStorage is enabled
+                    } else {
+                        // localStorage is disabled
+                    }
+                } catch(e) {
+                    // localStorage is disabled
+                }
+            } else {
+                // localStorage is not available
+            }
+
 			$(".list-group-home .list-item").click(function(e) {
 				// $(".list-group-home").removeClass(" list-group-center")
 				// $(".list-group-2").removeClass("list-group-right")
@@ -490,6 +507,22 @@ $('input[name="optionThemeInput"]').on('change', function(e) {
     var themeIndex = $(this).val();
     console.log(themes[themeIndex])
     less.modifyVars(themes[themeIndex]);
+    if (typeof localStorage !== 'undefined') {
+        try {
+            localStorage.setItem('feature_test', 'yes');
+            if (localStorage.getItem('feature_test') === 'yes') {
+                localStorage.setItem('theme', themeIndex);
+                localStorage.removeItem('feature_test');
+                // localStorage is enabled
+            } else {
+                // localStorage is disabled
+            }
+        } catch(e) {
+            // localStorage is disabled
+        }
+    } else {
+        // localStorage is not available
+    }
 });
 
 function minmax(value, min, max) {
