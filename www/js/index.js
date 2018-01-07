@@ -302,6 +302,24 @@ var themes = [{
     "@secondaryColor":"#39B1C6",
     "@highlightPrimary":"#f9f8f8",
     "@highlightSecondary":"#f9f8f8"
+}, {
+    "@backgroundColor":"#171233",
+    "@primaryColor":"#FF6B6B",
+    "@secondaryColor":"#C6F364",
+    "@highlightPrimary":"#f9f8f8",
+    "@highlightSecondary":"#f9f8f8"
+}, {
+    "@backgroundColor":"#f3f2e0",
+    "@primaryColor":"#8e254a",
+    "@secondaryColor":"#57792d",
+    "@highlightPrimary":"#fefbb4",
+    "@highlightSecondary":"#fefbb4"
+}, {
+    "@backgroundColor":"#E6DABB",
+    "@primaryColor":"#E25821",
+    "@secondaryColor":"#000",
+    "@highlightPrimary":"#f9f8f8",
+    "@highlightSecondary":"#E25821"
 }]
 
 function ladivaarGenerator(baani, element, singleNumber) {
