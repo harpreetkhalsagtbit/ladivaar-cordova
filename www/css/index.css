@@ -63,12 +63,18 @@ header {
 }
 .menu {
   position: absolute;
-  border: 1px solid;
-  height: 30px;
+  border: none;
+  height: auto;
   color: #32313B;
   top: 50px;
   right: 15px;
   z-index: 1000;
+  -webkit-box-shadow: 0 4px 5px #32313B;
+  -moz-box-shadow: 0 4px 5px #32313B;
+  box-shadow: 0 4px 5px #32313B;
+}
+.menu ul li {
+  border-top: 1px solid #323232bf;
 }
 .menu ul li p {
   background-color: rgba(255, 255, 255, 0.8);

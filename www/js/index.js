@@ -70,6 +70,7 @@ var app = {
 
 			// $("footer").hide()
 			$(".menu").hide();
+            $(".iOS_navigation svg g").hide()
 
 			// hack - to show hide modal on load
 			$(".hideModal").addClass("goToAngModalContainer").removeClass("hideModal");
@@ -106,7 +107,7 @@ var app = {
 
                     $(".main_screen_list").removeClass("list-group-left")
                     $(".tatkra_list").removeClass("list-group-center")  
-
+                    $(".iOS_navigation svg g").hide()
                     // hack by harpreet to reset when back pressed multiple times
                     // from nitnem_bani page and gurbani page
                     $(".main_screen_list").removeClass("list-group-center")
@@ -132,7 +133,7 @@ var app = {
                 }
                 if (window.location.hash == "#srigurugranthsahibjee") {
                     // showMe('tatkra')
-                    // $(".headerTitle").html("ਤਤਕਰਾ ਰਾਗਾਂ ਕਾ")
+                    // $(".headerTitle").html("ਤਤਕਰਾ")
 
 					$(".main_screen_list").removeClass("list-group-center")
 					$(".tatkra_list").removeClass("list-group-right")
@@ -148,10 +149,11 @@ var app = {
 
 					$(".guru_granth_sahib_baani").css("display", "none")
 		            // $("footer").show()
-					$(".title").html("ਤਤਕਰਾ ਰਾਗਾਂ ਕਾ")
+					$(".title").html("ਤਤਕਰਾ")
 					setTimeout(function() {
 						$(".menu").hide();
 					}, 100)
+                    $(".iOS_navigation svg g").show()
 
                 } else if (window.location.hash == "#nitnem") {
                     // showMe('nitnem_tatkra')
@@ -170,7 +172,7 @@ var app = {
 					setTimeout(function() {
 						$(".menu").hide();
 					}, 100)
-
+                    $(".iOS_navigation svg g").show()
                 } else if (window.location.hash.match(/nitnem_.*/)) {
 					$(".nitnem_list").removeClass("list-group-center")
 					$(".nitnem_list").addClass("list-group-left")
@@ -191,6 +193,7 @@ var app = {
                         // $(".highlightH1").removeClass('highlightH1')
                         // $(".highlightP").removeClass('highlightP')
 					}, 100)
+                    $(".iOS_navigation svg g").show()
                     // showMe('nitnem_gurbani')
                 } else if (window.location.hash.match(/_ang_\d{1,4}/)) {
                 	setTimeout(function() {
@@ -230,6 +233,7 @@ var app = {
 
                         // showMe('srigurugranthsahib_ang')
                     }
+                    $(".iOS_navigation svg g").show()
                 }
             })
 
