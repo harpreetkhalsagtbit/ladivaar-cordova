@@ -32,14 +32,14 @@ var app = {
                     localStorage.setItem('feature_test', 'yes');
                     if (localStorage.getItem('feature_test') === 'yes') {
                         var vars = {}
-                        var user_theme_index = localStorage.getItem('theme');
-                        var user_fontsize_index = localStorage.getItem('fonts');
+                        var user_theme_index = localStorage.getItem('theme') || "default_dark";
+                        var user_fontsize_index = localStorage.getItem('fonts') || "medium";
                         
-                        if(user_theme_index != "") {
+                        if(!user_theme_index) {
                             $("input[name='optionThemeInput']").val([user_theme_index])
                         }
 
-                        if(user_fontsize_index != "") {
+                        if(!user_fontsize_index) {
                             $("input[name='optionFontSizeInput']").val([user_fontsize_index])
                         }
                         console.log(user_theme_index, user_fontsize_index);
