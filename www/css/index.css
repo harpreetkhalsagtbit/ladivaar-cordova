@@ -29,11 +29,20 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 150;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+#splashScreenImage {
   background-image: url(../img/splash.jpg);
+  width: 100%;
+  height: 50%;
   z-index: 150;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 50% 50%;
   background-color: black;
 }
 .container {
@@ -82,16 +91,16 @@ header {
   top: 50px;
   right: 15px;
   z-index: 1000;
-  -webkit-box-shadow: 0 4px 5px #32313B;
-  -moz-box-shadow: 0 4px 5px #32313B;
-  box-shadow: 0 4px 5px #32313B;
+  -webkit-box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.6);
 }
-.menu ul li {
+.menu ul li:not(:first-child) {
   border-top: 1px solid #323232bf;
 }
 .menu ul li p {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 4px;
+  background-color: #ffffff;
+  padding: 10px 15px;
   font-size: 18px;
   width: 100%;
 }
@@ -297,7 +306,7 @@ li {
 li a {
   display: block;
   width: 100%;
-  font-size: 24px;
+  font-size: "28px";
 }
 .title {
   font-size: 32px;
@@ -368,12 +377,6 @@ li a {
 .guru_granth_sahib_baani {
   width: 100%;
   height: 100%;
-  /*  display: flex;
-  position: fixed;
-  flex-direction: column;
-  overflow: scroll;
-  padding-bottom: 100px;
-*/
 }
 .list-group-center-on-next {
   transform: translateX(0%);
@@ -443,11 +446,11 @@ li a {
   justify-content: center;
 }
 p {
-  font-size: 26px;
+  font-size: "28px";
 }
 h1 {
   color: #C9A758;
-  font-size: 32px;
+  font-size: "32px";
 }
 .highlightH1 {
   color: #f9f8f8;

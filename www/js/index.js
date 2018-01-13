@@ -22,9 +22,9 @@ var app = {
         this.bindEvents();
         $(document).ready(function() {
 
-            setTimeout(function() {
-                $("#splashScreen").fadeOut("slow");
-            }, 1500)
+            // setTimeout(function() {
+            //     $("#splashScreen").fadeOut("slow");
+            // }, 1500)
 
 
             if (typeof localStorage !== 'undefined') {
@@ -32,8 +32,15 @@ var app = {
                     localStorage.setItem('feature_test', 'yes');
                     if (localStorage.getItem('feature_test') === 'yes') {
                         var user_theme_index = localStorage.getItem('theme');
-                        less.modifyVars(themes[user_theme_index]);
-                        $("[name='optionThemeInput']").val([user_theme_index])
+                        if(user_theme_index != "") {
+                            less.modifyVars(themes[user_theme_index]);
+                            $("input[name='optionThemeInput']").val([user_theme_index])
+                        }
+                        var user_fontsize_index = localStorage.getItem('fonts');
+                        if(user_fontsize_index != "") {
+                            less.modifyVars(fonts[user_fontsize_index]);
+                            $("input[name='optionFontSizeInput']").val([user_fontsize_index])
+                        }
                         // localStorage is enabled
                     } else {
                         // localStorage is disabled
@@ -100,7 +107,6 @@ var app = {
 
             // $("[data-attr='srigurugranthsahib_ang']").hide()
             $(window).on('hashchange', function() {
-            	console.log("haschange", window.location.hash)
                 $(".goToAngModalContainer").hide();
                 $(".settingsModalContainer").hide();
 
@@ -253,7 +259,6 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("backbutton", function() {
-        	console.log("back button presed")
 			if (window.location.hash.match(/_ang_\d{1,4}/)) {
 				window.location.hash = "srigurugranthsahibjee"
 			} else if(window.location.hash.match(/nitnem_.*/)) {
@@ -274,7 +279,6 @@ var app = {
         app.receivedEvent('deviceready');
     },
     onBackKeyDown:function() {
-        console.log("hello back")
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -285,7 +289,6 @@ var app = {
         // listeningElement.setAttribute('style', 'display:none;');
         // receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
     }
 };
 
@@ -300,38 +303,86 @@ var nitnemBaniList = {
     "rehrassahib": "ਰਹਰਾਸਿ ਸਾਹਿਬ",
     "sohilasahib":"ਸੋਹਿਲਾ ਸਾਹਿਬ"
 }
-
-var themes = [{
-    "@backgroundColor":"#171233",
-    "@primaryColor":"#C9A758",
-    "@secondaryColor":"#49B8D1",
-    "@highlightPrimary":"#f9f8f8",
-    "@highlightSecondary":"#f9f8f8"
-}, {
-    "@backgroundColor":"#32313B",
-    "@primaryColor":"#EC3F8C",
-    "@secondaryColor":"#39B1C6",
-    "@highlightPrimary":"#f9f8f8",
-    "@highlightSecondary":"#f9f8f8"
-}, {
-    "@backgroundColor":"#171233",
-    "@primaryColor":"#FF6B6B",
-    "@secondaryColor":"#C6F364",
-    "@highlightPrimary":"#f9f8f8",
-    "@highlightSecondary":"#f9f8f8"
-}, {
-    "@backgroundColor":"#f3f2e0",
-    "@primaryColor":"#8e254a",
-    "@secondaryColor":"#57792d",
-    "@highlightPrimary":"#57792d",
-    "@highlightSecondary":"#8e254a"
-}, {
-    "@backgroundColor":"#E6DABB",
-    "@primaryColor":"#E25821",
-    "@secondaryColor":"#000",
-    "@highlightPrimary":"#f9f8f8",
-    "@highlightSecondary":"#E25821"
-}]
+var fonts = {
+    "tiny": {
+        "@fontsizeBold":"20px",
+        "@fontsizeNormal":"16px"
+    },
+    "small": {
+        "@fontsizeBold":"24px",
+        "@fontsizeNormal":"20px"
+    },
+    "medium": {
+        "@fontsizeBold":"28px",
+        "@fontsizeNormal":"24px"
+    },
+    "large": {
+        "@fontsizeBold":"34px",
+        "@fontsizeNormal":"30px"
+    },
+    "huge": {
+        "@fontsizeBold":"40px",
+        "@fontsizeNormal":"36px"
+    }
+}
+var themes = {
+    "default_dark": {
+        "@backgroundColor":"#171233",
+        "@primaryColor":"#C9A758",
+        "@secondaryColor":"#49B8D1",
+        "@highlightPrimary":"#f9f8f8",
+        "@highlightSecondary":"#f9f8f8"
+    },
+    "dark_sundar_gutka": {
+        "@backgroundColor":"#1B1C1D",
+        "@primaryColor":"#008000",
+        "@secondaryColor":"#BBB8B8",
+        "@highlightPrimary":"#FF8C00",
+        "@highlightSecondary":"#FF8C00"
+    },
+    "light_igranth": {
+        "@backgroundColor":"#ffffff",
+        "@primaryColor":"#212A91",
+        "@secondaryColor":"#000",
+        "@highlightPrimary":"#EF8B45",
+        "@highlightSecondary":"#EF8B45"
+    },
+    "light_sundar_gutka": {
+        "@backgroundColor":"#ffffff",
+        "@primaryColor":"#008000",
+        "@secondaryColor":"#000",
+        "@highlightPrimary":"#EF8B45",
+        "@highlightSecondary":"#EF8B45"
+    },
+    "cassandra": {
+        "@backgroundColor":"#32313B",
+        "@primaryColor":"#EC3F8C",
+        "@secondaryColor":"#39B1C6",
+        "@highlightPrimary":"#f9f8f8",
+        "@highlightSecondary":"#f9f8f8"
+    },
+    "dark_royal": {
+        "@backgroundColor":"#171233",
+        "@primaryColor":"#FF6B6B",
+        "@secondaryColor":"#C6F364",
+        "@highlightPrimary":"#f9f8f8",
+        "@highlightSecondary":"#f9f8f8"
+    },
+    "light_floral": {
+        "@backgroundColor":"#f3f2e0",
+        "@primaryColor":"#8e254a",
+        "@secondaryColor":"#57792d",
+        "@highlightPrimary":"#57792d",
+        "@highlightSecondary":"#8e254a"
+    },
+    "vintage": {
+        "@backgroundColor":"#E6DABB",
+        "@primaryColor":"#E25821",
+        "@secondaryColor":"#000",
+        "@highlightPrimary":"#f9f8f8",
+        "@highlightSecondary":"#E25821"
+    }
+}
 
 function ladivaarGenerator(baani, element, singleNumber) {
     $('h1 span').unbind("mouseover");
@@ -367,7 +418,6 @@ function ladivaarGenerator(baani, element, singleNumber) {
                     }
                 }
             } else {
-                console.log("Error", baani[i].baani_content)
                 var _wordsArr = baani[i].baani_content.split(/\s+/g);
                 if (_wordsArr.length) {
                     _paragraphStringHTMLArr.push("<p class='text-center'><span>" + _wordsArr.join("</span><span>") + "</span></p>")
@@ -384,17 +434,23 @@ function ladivaarGenerator(baani, element, singleNumber) {
         // $("[data-attr='tatkra']").hide()
         // $("[data-attr='srigurugranthsahib_ang']").show()
 
-        $('h1 span').mouseover(function() {
-            $(this).addClass('highlightH1')
+        $('h1 span').click(function() {
+            if($(this).hasClass('highlightH1')) {
+                $(this).removeClass('highlightH1')
+            } else {
+                $('.highlightP').removeClass('highlightP');
+                $('.highlightH1').removeClass('highlightH1');
+                $(this).addClass('highlightH1')
+            }
         });
-        $('h1 span').mouseout(function() {
-            $(this).removeClass('highlightH1')
-        });
-        $('p span').mouseover(function() {
-            $(this).addClass('highlightP')
-        });
-        $('p span').mouseout(function() {
-            $(this).removeClass('highlightP')
+        $('p span').click(function() {
+            if($(this).hasClass('highlightP')) {
+                $(this).removeClass('highlightP')
+            } else {
+                $('.highlightP').removeClass('highlightP');
+                $('.highlightH1').removeClass('highlightH1');
+                $(this).addClass('highlightP')
+            }
         });
     }
 }
@@ -532,15 +588,42 @@ $(".iOS_navigation").on("click", function() {
 })
 
 $('input[name="optionThemeInput"]').on('change', function(e) {
-    console.log(e.type, $(this).val());
     var themeIndex = $(this).val();
-    console.log(themes[themeIndex])
-    less.modifyVars(themes[themeIndex]);
+    var vars = {}
+    var fontVars = fonts[localStorage.getItem("fonts")]
+    var themeVars = themes[themeIndex]
+    $.extend(vars, fontVars, themeVars)
+    less.modifyVars(vars);
     if (typeof localStorage !== 'undefined') {
         try {
             localStorage.setItem('feature_test', 'yes');
             if (localStorage.getItem('feature_test') === 'yes') {
                 localStorage.setItem('theme', themeIndex);
+                localStorage.removeItem('feature_test');
+                // localStorage is enabled
+            } else {
+                // localStorage is disabled
+            }
+        } catch(e) {
+            // localStorage is disabled
+        }
+    } else {
+        // localStorage is not available
+    }
+});
+
+$('input[name="optionFontSizeInput"]').on('change', function(e) {
+    var fontsizeIndex = $(this).val();
+    var vars = {}
+    var fontVars = fonts[fontsizeIndex]
+    var themeVars = themes[localStorage.getItem("theme")]
+    $.extend(vars, fontVars, themeVars)
+    less.modifyVars(vars);
+    if (typeof localStorage !== 'undefined') {
+        try {
+            localStorage.setItem('feature_test', 'yes');
+            if (localStorage.getItem('feature_test') === 'yes') {
+                localStorage.setItem('fonts', fontsizeIndex);
                 localStorage.removeItem('feature_test');
                 // localStorage is enabled
             } else {
@@ -564,7 +647,6 @@ function minmax(value, min, max) {
 
 var resim = $(".swipe-gesture");
 resim.hammer().on("swipeleft", function(ev) {
-    console.log('left: ', ev);
     var center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
     var left = $(".list-group-left-on-next").length?$(".list-group-left-on-next"):$(".list-group-left-on-prev")
     var right = $(".list-group-right-on-next").length?$(".list-group-right-on-next"):$(".list-group-right-on-prev")
@@ -590,7 +672,6 @@ resim.hammer().on("swipeleft", function(ev) {
 });
 
 resim.hammer().on("swiperight", function(ev) {
-    console.log('right: ', ev);
     var center = $(".list-group-center-on-next").length?$(".list-group-center-on-next"):$(".list-group-center-on-prev")
     var left = $(".list-group-left-on-next").length?$(".list-group-left-on-next"):$(".list-group-left-on-prev")
     var right = $(".list-group-right-on-next").length?$(".list-group-right-on-next"):$(".list-group-right-on-prev")

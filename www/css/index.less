@@ -7,6 +7,9 @@
 @highlightPrimary:#f9f8f8;
 @highlightSecondary:#f9f8f8;
 
+@fontsizeBold:"32px";
+@fontsizeNormal:"28px";
+
 * {
   margin: 0;
   padding: 0;
@@ -36,11 +39,21 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 150;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+#splashScreenImage {
   background-image: url(../img/splash.jpg);
+  width: 100%;
+  height: 50%;
   z-index: 150;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 50% 50%;
   background-color: black;
 }
 
@@ -101,12 +114,12 @@ header {
   box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.6);
 }
 
-.menu ul li {
+.menu ul li:not(:first-child) {
   border-top: 1px solid #323232bf;
 }
 
 .menu ul li p {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 1);
   padding: 10px 15px;
   font-size: 18px;
   width: 100%;
@@ -342,7 +355,7 @@ li {
 li a {
   display: block;
   width:100%;
-  font-size: 24px;
+  font-size: @fontsizeNormal;
 }
 
 .title {
@@ -424,12 +437,7 @@ li a {
 .guru_granth_sahib_baani {
   width: 100%;
   height: 100%;
-/*  display: flex;
-  position: fixed;
-  flex-direction: column;
-  overflow: scroll;
-  padding-bottom: 100px;
-*/}
+}
 
 .list-group-center-on-next{
     transform:translateX(0%);
@@ -515,12 +523,12 @@ li a {
 }
 
 p {
-  font-size: 26px;
+  font-size: @fontsizeNormal;
 }
 
 h1 {
   color: @primaryColor;
-  font-size: 32px;
+  font-size: @fontsizeBold;
 }
 
 .highlightH1 {

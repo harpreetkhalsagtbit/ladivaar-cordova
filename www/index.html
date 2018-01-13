@@ -45,7 +45,9 @@
 
 <body>
 	<div>
-		<div id="splashScreen"></div>
+		<div id="splashScreen">
+			<div id="splashScreenImage"></div>
+		</div>
 		<header>
 			<div class="iOS_navigation">
 				<svg width="30" height="40" xmlns="http://www.w3.org/2000/svg">
@@ -449,28 +451,51 @@
 					<ul>
 						<li>
 							<label>
-								<input type="radio" name="optionThemeInput" value="0" checked>
-								<span></span>Default Dark</label>
+								<input type="radio" name="optionThemeInput" value="default_dark" checked>
+								<span>Default Dark</span>
+							</label>
+						</li>
+						<!-- <li>
+							<label>
+								<input type="radio" name="optionThemeInput" value="dark_sundar_gutka">
+								<span>Dark Sundar Gutka</span>
+							</label>
+						</li> -->
+						<li>
+							<label>
+								<input type="radio" name="optionThemeInput" value="dark_royal">
+								<span>Dark Royal</span>
+							</label>
+						</li>
+						<!-- <li>
+							<label>
+								<input type="radio" name="optionThemeInput" value="light_igranth">
+								<span>Light iGranth</span>
+							</label>
+						</li> -->
+						<!-- <li>
+							<label>
+								<input type="radio" name="optionThemeInput" value="light_sundar_gutka">
+								<span>Light Sundar Gutka</span>
+							</label>
+						</li> -->
+						<li>
+							<label>
+								<input type="radio" name="optionThemeInput" value="light_floral">
+								<span>Light Floral</span>
+							</label>
 						</li>
 						<li>
 							<label>
-								<input type="radio" name="optionThemeInput" value="1">
-								<span></span>Cassandra</label>
+								<input type="radio" name="optionThemeInput" value="cassandra">
+								<span>Cassandra</span>
+							</label>
 						</li>
 						<li>
 							<label>
-								<input type="radio" name="optionThemeInput" value="2">
-								<span></span>Dark Royal</label>
-						</li>
-						<li>
-							<label>
-								<input type="radio" name="optionThemeInput" value="3">
-								<span></span>Light Floral</label>
-						</li>
-						<li>
-							<label>
-								<input type="radio" name="optionThemeInput" value="4">
-								<span></span>Vintage</label>
+								<input type="radio" name="optionThemeInput" value="vintage">
+								<span>Vintage</span>
+							</label>
 						</li>
 					</ul>
 				</div>
@@ -479,23 +504,28 @@
 					<ul>
 						<li>
 							<label>
-								<input type="radio" name="optionFontSizeInput" value="4">
+								<input type="radio" name="optionFontSizeInput" value="huge">
 								<span></span>Huge</label>
 						</li>
 						<li>
 							<label>
-								<input type="radio" name="optionFontSizeInput" value="3">
+								<input type="radio" name="optionFontSizeInput" value="large">
 								<span></span>Large</label>
 						</li>
 						<li>
 							<label>
-								<input type="radio" name="optionFontSizeInput" value="2" checked>
+								<input type="radio" name="optionFontSizeInput" value="medium" checked>
 								<span></span>Medium</label>
 						</li>
 						<li>
 							<label>
-								<input type="radio" name="optionFontSizeInput" value="1">
+								<input type="radio" name="optionFontSizeInput" value="small">
 								<span></span>Small</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="optionFontSizeInput" value="tiny">
+								<span></span>Tiny</label>
 						</li>
 					</ul>
 				</div>
