@@ -31,16 +31,21 @@ var app = {
                 try {
                     localStorage.setItem('feature_test', 'yes');
                     if (localStorage.getItem('feature_test') === 'yes') {
+                        var vars = {}
                         var user_theme_index = localStorage.getItem('theme');
+                        var user_fontsize_index = localStorage.getItem('fonts');
+                        
                         if(user_theme_index != "") {
-                            less.modifyVars(themes[user_theme_index]);
                             $("input[name='optionThemeInput']").val([user_theme_index])
                         }
-                        var user_fontsize_index = localStorage.getItem('fonts');
+
                         if(user_fontsize_index != "") {
-                            less.modifyVars(fonts[user_fontsize_index]);
                             $("input[name='optionFontSizeInput']").val([user_fontsize_index])
                         }
+                        console.log(user_theme_index, user_fontsize_index);
+                        $.extend(vars, themes[user_theme_index], fonts[user_fontsize_index]);
+                        console.log(vars)
+                        less.modifyVars(vars);
                         // localStorage is enabled
                     } else {
                         // localStorage is disabled

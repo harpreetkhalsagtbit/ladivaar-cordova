@@ -221,6 +221,9 @@ header {
 }
 .settingsModalChildWrapper {
   width: 80%;
+  max-height: 80%;
+  height: 100%;
+  overflow-y: scroll;
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
@@ -231,10 +234,8 @@ header {
   border-bottom-right-radius: 10px;
 }
 .labelSettings {
-  display: flex;
-  align-items: flex-end;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 2px;
+  padding: 6px;
   color: black;
   border: none;
   width: 100%;
@@ -243,9 +244,6 @@ header {
 }
 .optionsItems {
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding: 10px;
 }
 .optionsItems li {
