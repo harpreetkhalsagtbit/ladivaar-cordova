@@ -272,8 +272,9 @@ var app = {
 				window.location.hash = ""
 			} else if(window.location.hash.match(/srigurugranthsahibjee/)) {
 				window.location.hash = ""
-			}
-
+			} else if(window.location.hash == ""){
+                navigator.app.exitApp();
+            }
         }, false);
     },
     // deviceready Event Handler
