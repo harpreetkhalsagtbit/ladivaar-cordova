@@ -22,9 +22,9 @@ var app = {
         this.bindEvents();
         $(document).ready(function() {
 
-            // setTimeout(function() {
-            //     $("#splashScreen").fadeOut("slow");
-            // }, 1500)
+            setTimeout(function() {
+                $("#splashScreen").fadeOut("slow");
+            }, 1500)
 
 
             if (typeof localStorage !== 'undefined') {
