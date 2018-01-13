@@ -20,7 +20,7 @@
 <html>
 
 <head>
-    <!--
+	<!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -29,13 +29,14 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
-	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'"
+	/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-<!--     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<!--     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<link rel="stylesheet/less" type="text/css" href="css/index.less" />
@@ -43,25 +44,26 @@
 </head>
 
 <body>
-    <div>
-        <header>
-            <div class="iOS_navigation">
+	<div>
+		<div id="splashScreen"></div>
+		<header>
+			<div class="iOS_navigation">
 				<svg width="30" height="40" xmlns="http://www.w3.org/2000/svg">
 					<g transform="scale(0.07)">
-						<polygon fill="#ff8c00" id="svg_1" points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "/>
+						<polygon fill="#ff8c00" id="svg_1" points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 " />
 					</g>
 				</svg>
-            </div>
-            <div class="title">
-               ਲੜੀਵਾਰ
-            </div>
-            <div class="hamburger_icon menu_control">
-            	<svg class="menu_control" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-					 <g>
-						<circle class="menu_control" fill="#ff8c00" id="svg_1" r="3" cy="14" cx="12"/>
-						<circle class="menu_control" fill="#ff8c00" id="svg_2" r="3" cy="7" cx="12"/>
-						<circle class="menu_control" fill="#ff8c00" id="svg_3" r="3" cy="21" cx="12"/>
-					 </g>
+			</div>
+			<div class="title">
+				ਲੜੀਵਾਰ
+			</div>
+			<div class="hamburger_icon menu_control">
+				<svg class="menu_control" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+					<g>
+						<circle class="menu_control" fill="#ff8c00" id="svg_1" r="3" cy="14" cx="12" />
+						<circle class="menu_control" fill="#ff8c00" id="svg_2" r="3" cy="7" cx="12" />
+						<circle class="menu_control" fill="#ff8c00" id="svg_3" r="3" cy="21" cx="12" />
+					</g>
 				</svg>
 				</svg>
 				<div class="hideMenu menu">
@@ -74,17 +76,17 @@
 						</li>
 					</ul>
 				</div>
-            </div>
-        </header>
-        <div class="main">
+			</div>
+		</header>
+		<div class="main">
 			<div class="main_screen_list list-group-center">
 				<ul>
-						<li id=srigurugranthsahibjee class="list-item">
-							<a href="#srigurugranthsahibjee">ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ</a>
-						</li>
-						<li id=nitnem class="list-item">
-							<a href="#nitnem">ਨਿਤਨੇਮ</a>
-						</li>
+					<li id=srigurugranthsahibjee class="list-item">
+						<a href="#srigurugranthsahibjee">ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ</a>
+					</li>
+					<li id=nitnem class="list-item">
+						<a href="#nitnem">ਨਿਤਨੇਮ</a>
+					</li>
 				</ul>
 
 			</div>
@@ -92,288 +94,288 @@
 			<!-- Tatkra Sri Guru Granth Sahib Jee -->
 			<div data-attr="tatkra" class="tatkra_list list-group-right">
 				<ui>
-						<li href="#srigurugranthsahibjee_ang_1" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1">
-								<div>ਜਪੁ</div>
-								<div>੧</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_8" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_8">
-								<div>ਸੋ ਦਰੁ</div>
-								<div>੮</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_10" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_10">
-								<div>ਸੋ ਪੁਰਖੁ</div>
-								<div>੧੦</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_12" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_12">
-								<div>ਸੋਹਿਲਾ</div>
-								<div>੧੨</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_14" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_14">
-								<div>ਸਿਰੀਰਾਗੁ</div>
-								<div>੧੪</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_94" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_94">
-								<div>ਰਾਗੁਮਾਝ</div>
-								<div>੯੪</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_151" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_151">
-								<div>ਰਾਗੁਗਉੜੀ</div>
-								<div>੧੫੧</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_347" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_347">
-								<div>ਰਾਗੁਆਸਾ</div>
-								<div>੩੪੭</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_489" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_489">
-								<div>ਰਾਗੁਗੂਜਰੀ</div>
-								<div>੪੮੯</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_527" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_527">
-								<div>ਰਾਗੁਦੇਵਗੰਧਾਰੀ</div>
-								<div>੫੨੭</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_537" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_537">
-								<div>ਰਾਗੁਬਿਹਾਗੜਾ</div>
-								<div>੫੩੭</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_557" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_557">
-								<div>ਰਾਗੁਵਡਹੰਸੁ</div>
-								<div>੫੫੭</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_595" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_595">
-								<div>ਰਾਗੁਸੋਰਠਿ</div>
-								<div>੫੯੫</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_660" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_660">
-								<div>ਰਾਗੁਧਨਾਸਰੀ</div>
-								<div>੬੬੦</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_696" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_696">
-								<div>ਰਾਗੁਜੈਤਸਰੀ</div>
-								<div>੬੯੬</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_711" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_711">
-								<div>ਰਾਗੁਟੋਡੀ</div>
-								<div>੭੧੧</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_719" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_719">
-								<div>ਰਾਗੁਬੈਰਾੜੀ</div>
-								<div>੭੧੯</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_721" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_721">
-								<div>ਰਾਗੁਤਿਲੰਗ</div>
-								<div>੭੨੧</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_728" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_728">
-								<div>ਰਾਗੁਸੂਹੀ</div>
-								<div>੭੨੮</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_795" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_795">
-								<div>ਰਾਗੁਬਿਲਾਵਲੁ</div>
-								<div>੭੯੫</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_859" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_859">
-								<div>ਰਾਗੁਗੋਂਡ</div>
-								<div>੮੫੯</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_876" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_876">
-								<div>ਰਾਗੁਰਾਮਕਲੀ</div>
-								<div>੮੭੬</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_975" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_975">
-								<div>ਰਾਗੁਨਟਨਾਰਾਇਨ</div>
-								<div>੯੭੫</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_984" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_984">
-								<div>ਰਾਗੁਮਾਲੀਗਉੜਾ</div>
-								<div>੯੮੪</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_989" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_989">
-								<div>ਰਾਗੁਮਾਰੂ</div>
-								<div>੯੮੯</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1107" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1107">
-								<div>ਰਾਗੁਤੁਖਾਰੀ</div>
-								<div>੧੧੦੭</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1118" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1118">
-								<div>ਰਾਗੁਕੇਦਾਰਾ</div>
-								<div>੧੧੧੮</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1125" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1125">
-								<div>ਰਾਗੁਭੈਰਉ</div>
-								<div>੧੧੨੫</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1168" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1168">
-								<div>ਰਾਗੁਬਸੰਤੁ</div>
-								<div>੧੧੬੮</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1197" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1197">
-								<div>ਰਾਗੁਸਾਰਗ</div>
-								<div>੧੧੯੭</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1254" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1254">
-								<div>ਰਾਗੁਮਲਾਰ</div>
-								<div>੧੨੫੪</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1294" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1294">
-								<div>ਰਾਗੁਕਾਨੜਾ</div>
-								<div>੧੨੯੪</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1319" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1319">
-								<div>ਰਾਗੁਕਲਿਆਨ</div>
-								<div>੧੩੧੯</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1327" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1327">
-								<div>ਰਾਗੁਪ੍ਰਭਾਤੀ</div>
-								<div>੧੩੨੭</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1352" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1352">
-								<div>ਰਾਗੁਜੈਜਾਵੰਤੀ</div>
-								<div>੧੩੫੨</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1353" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1353">
-								<div>ਸਲੋਕਸਹਸਕ੍ਰਿਤੀਮਹਲਾ੧</div>
-								<div>੧੩੫੩</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1353" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1353">
-								<div>ਸਲੋਕਸਹਸਕ੍ਰਿਤੀਮਹਲਾ੫</div>
-								<div>੧੩੫੩</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1360" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1360">
-								<div>ਮਹਲਾ੫ਗਾਥਾ</div>
-								<div>੧੩੬੦</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1361" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1361">
-								<div>ਫੁਨਹੇਮਹਲਾ੫</div>
-								<div>੧੩੬੧</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1363" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1363">
-								<div>ਚਉਬੋਲੇਮਹਲਾ੫</div>
-								<div>੧੩੬੩</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1364" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1364">
-								<div>ਸਲੋਕਭਗਤਕਬੀਰਜੀਉਕੇ</div>
-								<div>੧੩੬੪</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1377" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1377">
-								<div>ਸਲੋਕਸੇਖਫਰੀਦਕੇ</div>
-								<div>੧੩੭੭</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1385" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1385">
-								<div>ਸਵਯੇਸ੍ਰੀਮੁਖਬਾਕਮਹਲਾ੫</div>
-								<div>੧੩੮੫</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1410" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1410">
-								<div>ਸਲੋਕਵਾਰਾਂਤੇਵਧੀਕ</div>
-								<div>੧੪੧੦</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1426" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1426">
-								<div>ਸਲੋਕਮਹਲਾ੯</div>
-								<div>੧੪੨੬</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1429" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1429">
-								<div>ਮੁੰਦਾਵਣੀਮਹਲਾ੫</div>
-								<div>੧੪੨੯</div>
-					        </a>
-						</li>
-						<li href="#srigurugranthsahibjee_ang_1429" class="list-item"">
-					        <a href="#srigurugranthsahibjee_ang_1429">
-								<div>ਰਾਗਮਾਲਾ</div>
-								<div>੧੪੨੯</div>
-					        </a>
-						</li>
+					<li href="#srigurugranthsahibjee_ang_1" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1">
+							<div>ਜਪੁ</div>
+							<div>੧</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_8" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_8">
+							<div>ਸੋ ਦਰੁ</div>
+							<div>੮</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_10" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_10">
+							<div>ਸੋ ਪੁਰਖੁ</div>
+							<div>੧੦</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_12" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_12">
+							<div>ਸੋਹਿਲਾ</div>
+							<div>੧੨</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_14" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_14">
+							<div>ਸਿਰੀਰਾਗੁ</div>
+							<div>੧੪</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_94" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_94">
+							<div>ਰਾਗੁਮਾਝ</div>
+							<div>੯੪</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_151" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_151">
+							<div>ਰਾਗੁਗਉੜੀ</div>
+							<div>੧੫੧</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_347" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_347">
+							<div>ਰਾਗੁਆਸਾ</div>
+							<div>੩੪੭</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_489" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_489">
+							<div>ਰਾਗੁਗੂਜਰੀ</div>
+							<div>੪੮੯</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_527" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_527">
+							<div>ਰਾਗੁਦੇਵਗੰਧਾਰੀ</div>
+							<div>੫੨੭</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_537" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_537">
+							<div>ਰਾਗੁਬਿਹਾਗੜਾ</div>
+							<div>੫੩੭</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_557" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_557">
+							<div>ਰਾਗੁਵਡਹੰਸੁ</div>
+							<div>੫੫੭</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_595" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_595">
+							<div>ਰਾਗੁਸੋਰਠਿ</div>
+							<div>੫੯੫</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_660" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_660">
+							<div>ਰਾਗੁਧਨਾਸਰੀ</div>
+							<div>੬੬੦</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_696" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_696">
+							<div>ਰਾਗੁਜੈਤਸਰੀ</div>
+							<div>੬੯੬</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_711" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_711">
+							<div>ਰਾਗੁਟੋਡੀ</div>
+							<div>੭੧੧</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_719" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_719">
+							<div>ਰਾਗੁਬੈਰਾੜੀ</div>
+							<div>੭੧੯</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_721" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_721">
+							<div>ਰਾਗੁਤਿਲੰਗ</div>
+							<div>੭੨੧</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_728" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_728">
+							<div>ਰਾਗੁਸੂਹੀ</div>
+							<div>੭੨੮</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_795" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_795">
+							<div>ਰਾਗੁਬਿਲਾਵਲੁ</div>
+							<div>੭੯੫</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_859" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_859">
+							<div>ਰਾਗੁਗੋਂਡ</div>
+							<div>੮੫੯</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_876" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_876">
+							<div>ਰਾਗੁਰਾਮਕਲੀ</div>
+							<div>੮੭੬</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_975" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_975">
+							<div>ਰਾਗੁਨਟਨਾਰਾਇਨ</div>
+							<div>੯੭੫</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_984" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_984">
+							<div>ਰਾਗੁਮਾਲੀਗਉੜਾ</div>
+							<div>੯੮੪</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_989" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_989">
+							<div>ਰਾਗੁਮਾਰੂ</div>
+							<div>੯੮੯</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1107" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1107">
+							<div>ਰਾਗੁਤੁਖਾਰੀ</div>
+							<div>੧੧੦੭</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1118" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1118">
+							<div>ਰਾਗੁਕੇਦਾਰਾ</div>
+							<div>੧੧੧੮</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1125" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1125">
+							<div>ਰਾਗੁਭੈਰਉ</div>
+							<div>੧੧੨੫</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1168" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1168">
+							<div>ਰਾਗੁਬਸੰਤੁ</div>
+							<div>੧੧੬੮</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1197" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1197">
+							<div>ਰਾਗੁਸਾਰਗ</div>
+							<div>੧੧੯੭</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1254" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1254">
+							<div>ਰਾਗੁਮਲਾਰ</div>
+							<div>੧੨੫੪</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1294" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1294">
+							<div>ਰਾਗੁਕਾਨੜਾ</div>
+							<div>੧੨੯੪</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1319" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1319">
+							<div>ਰਾਗੁਕਲਿਆਨ</div>
+							<div>੧੩੧੯</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1327" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1327">
+							<div>ਰਾਗੁਪ੍ਰਭਾਤੀ</div>
+							<div>੧੩੨੭</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1352" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1352">
+							<div>ਰਾਗੁਜੈਜਾਵੰਤੀ</div>
+							<div>੧੩੫੨</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1353" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1353">
+							<div>ਸਲੋਕਸਹਸਕ੍ਰਿਤੀਮਹਲਾ੧</div>
+							<div>੧੩੫੩</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1353" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1353">
+							<div>ਸਲੋਕਸਹਸਕ੍ਰਿਤੀਮਹਲਾ੫</div>
+							<div>੧੩੫੩</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1360" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1360">
+							<div>ਮਹਲਾ੫ਗਾਥਾ</div>
+							<div>੧੩੬੦</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1361" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1361">
+							<div>ਫੁਨਹੇਮਹਲਾ੫</div>
+							<div>੧੩੬੧</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1363" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1363">
+							<div>ਚਉਬੋਲੇਮਹਲਾ੫</div>
+							<div>੧੩੬੩</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1364" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1364">
+							<div>ਸਲੋਕਭਗਤਕਬੀਰਜੀਉਕੇ</div>
+							<div>੧੩੬੪</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1377" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1377">
+							<div>ਸਲੋਕਸੇਖਫਰੀਦਕੇ</div>
+							<div>੧੩੭੭</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1385" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1385">
+							<div>ਸਵਯੇਸ੍ਰੀਮੁਖਬਾਕਮਹਲਾ੫</div>
+							<div>੧੩੮੫</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1410" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1410">
+							<div>ਸਲੋਕਵਾਰਾਂਤੇਵਧੀਕ</div>
+							<div>੧੪੧੦</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1426" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1426">
+							<div>ਸਲੋਕਮਹਲਾ੯</div>
+							<div>੧੪੨੬</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1429" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1429">
+							<div>ਮੁੰਦਾਵਣੀਮਹਲਾ੫</div>
+							<div>੧੪੨੯</div>
+						</a>
+					</li>
+					<li href="#srigurugranthsahibjee_ang_1429" class="list-item">
+						<a href="#srigurugranthsahibjee_ang_1429">
+							<div>ਰਾਗਮਾਲਾ</div>
+							<div>੧੪੨੯</div>
+						</a>
+					</li>
 				</ui>
 			</div>
 
@@ -409,20 +411,20 @@
 				</div>
 			</div>
 
-		    <!-- Gurbani Content -->
-		    <div class="guru_granth_sahib_baani list-group-right">
-		    	<div class="containerX">
-		    		<div class="main_screen_listX swipe-gesture list-group-center-on-next">
-		    		</div>
-		    		<div class="tatkra_listX swipe-gesture list-group-right-on-next">
-		    		</div>
-		    		<div class="nitnem_listX swipe-gesture list-group-left-on-next">
-		    		</div>
-		    	</div>
+			<!-- Gurbani Content -->
+			<div class="guru_granth_sahib_baani list-group-right">
+				<div class="containerX">
+					<div class="main_screen_listX swipe-gesture list-group-center-on-next">
+					</div>
+					<div class="tatkra_listX swipe-gesture list-group-right-on-next">
+					</div>
+					<div class="nitnem_listX swipe-gesture list-group-left-on-next">
+					</div>
+				</div>
 
-		    </div>
+			</div>
 
-        </div>
+		</div>
 		<!-- <footer>
 			<div class="angNoContainer">
 				<p><span id="angNo"></span></p>
@@ -432,7 +434,7 @@
 			<div class="goToAngModalChildWrapper">
 				<div class="label_select_ang">Enter Ang No.</div>
 				<div>
-					<input type="number" id="goToAngText" step="1" min="1" max="1430" name="txtNumber"/>
+					<input type="number" id="goToAngText" step="1" min="1" max="1430" name="txtNumber" />
 				</div>
 				<div class="modal_footer">
 					<button id="cancel">Cancel</button>
@@ -446,19 +448,29 @@
 				<div class="optionsItems">
 					<ul>
 						<li>
-							<label><input type="radio" name="optionThemeInput" value="0" checked> <span></span>Default Dark</label>
+							<label>
+								<input type="radio" name="optionThemeInput" value="0" checked>
+								<span></span>Default Dark</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionThemeInput" value="1"> <span></span>Cassandra</label>
+							<label>
+								<input type="radio" name="optionThemeInput" value="1">
+								<span></span>Cassandra</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionThemeInput" value="2"> <span></span>Dark Royal</label>
+							<label>
+								<input type="radio" name="optionThemeInput" value="2">
+								<span></span>Dark Royal</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionThemeInput" value="3"> <span></span>Light Floral</label>
+							<label>
+								<input type="radio" name="optionThemeInput" value="3">
+								<span></span>Light Floral</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionThemeInput" value="4"> <span></span>Vintage</label>
+							<label>
+								<input type="radio" name="optionThemeInput" value="4">
+								<span></span>Vintage</label>
 						</li>
 					</ul>
 				</div>
@@ -466,31 +478,39 @@
 				<div class="optionsItems">
 					<ul>
 						<li>
-							<label><input type="radio" name="optionFontSizeInput" value="4"> <span></span>Huge</label>
+							<label>
+								<input type="radio" name="optionFontSizeInput" value="4">
+								<span></span>Huge</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionFontSizeInput" value="3"> <span></span>Large</label>
+							<label>
+								<input type="radio" name="optionFontSizeInput" value="3">
+								<span></span>Large</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionFontSizeInput" value="2" checked> <span></span>Medium</label>
+							<label>
+								<input type="radio" name="optionFontSizeInput" value="2" checked>
+								<span></span>Medium</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionFontSizeInput" value="1"> <span></span>Small</label>
+							<label>
+								<input type="radio" name="optionFontSizeInput" value="1">
+								<span></span>Small</label>
 						</li>
 					</ul>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/hammer.min.js"></script>
-    <script type="text/javascript" src="js/jquery.hammer.js"></script>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/less.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/output.js"></script>
-    <script type="text/javascript" src="js/nitnem.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hammer.min.js"></script>
+	<script type="text/javascript" src="js/jquery.hammer.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/less.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/output.js"></script>
+	<script type="text/javascript" src="js/nitnem.js"></script>
 </body>
 
 </html>

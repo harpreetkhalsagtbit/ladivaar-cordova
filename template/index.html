@@ -20,7 +20,7 @@
 <html>
 
 <head>
-    <!--
+	<!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -29,13 +29,14 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
-	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'"
+	/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-<!--     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<!--     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<link rel="stylesheet/less" type="text/css" href="css/index.less" />
@@ -43,25 +44,26 @@
 </head>
 
 <body>
-    <div>
-        <header>
-            <div class="iOS_navigation">
+	<div>
+		<div id="splashScreen"></div>
+		<header>
+			<div class="iOS_navigation">
 				<svg width="30" height="40" xmlns="http://www.w3.org/2000/svg">
 					<g transform="scale(0.07)">
-						<polygon fill="#ff8c00" id="svg_1" points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "/>
+						<polygon fill="#ff8c00" id="svg_1" points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 " />
 					</g>
 				</svg>
-            </div>
-            <div class="title">
-               ਲੜੀਵਾਰ
-            </div>
-            <div class="hamburger_icon menu_control">
-            	<svg class="menu_control" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-					 <g>
-						<circle class="menu_control" fill="#ff8c00" id="svg_1" r="3" cy="14" cx="12"/>
-						<circle class="menu_control" fill="#ff8c00" id="svg_2" r="3" cy="7" cx="12"/>
-						<circle class="menu_control" fill="#ff8c00" id="svg_3" r="3" cy="21" cx="12"/>
-					 </g>
+			</div>
+			<div class="title">
+				ਲੜੀਵਾਰ
+			</div>
+			<div class="hamburger_icon menu_control">
+				<svg class="menu_control" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+					<g>
+						<circle class="menu_control" fill="#ff8c00" id="svg_1" r="3" cy="14" cx="12" />
+						<circle class="menu_control" fill="#ff8c00" id="svg_2" r="3" cy="7" cx="12" />
+						<circle class="menu_control" fill="#ff8c00" id="svg_3" r="3" cy="21" cx="12" />
+					</g>
 				</svg>
 				</svg>
 				<div class="hideMenu menu">
@@ -74,15 +76,15 @@
 						</li>
 					</ul>
 				</div>
-            </div>
-        </header>
-        <div class="main">
+			</div>
+		</header>
+		<div class="main">
 			<div class="main_screen_list list-group-center">
 				<ul>
 					{{#each homePageList}}
-						<li id={{hash}} class="list-item">
-							<a href="#{{hash}}">{{label}}</a>
-						</li>
+					<li id={{hash}} class="list-item">
+						<a href="#{{hash}}">{{label}}</a>
+					</li>
 					{{/each}}
 				</ul>
 
@@ -92,23 +94,23 @@
 			<div data-attr="tatkra" class="tatkra_list list-group-right">
 				<ui>
 					{{#each tatkraList}}
-						<li href="#{{hash}}" class="list-item"">
-					        <a href="#{{hash}}">
-								<div>{{label}}</div>
-								<div>{{angNo}}</div>
-					        </a>
-						</li>
+					<li href="#{{hash}}" class="list-item">
+						<a href="#{{hash}}">
+							<div>{{label}}</div>
+							<div>{{angNo}}</div>
+						</a>
+					</li>
 					{{/each}}
 				</ui>
 			</div>
 
 			<div class="nitnem_list list-group-right">
 				<ui>
-				{{#each nitnemPageList}}
+					{{#each nitnemPageList}}
 					<li id={{hash}} class="list-item">
 						<a href="#{{hash}}">{{label}}</a>
 					</li>
-				{{/each}}
+					{{/each}}
 				</ui>
 			</div>
 
@@ -118,20 +120,20 @@
 				</div>
 			</div>
 
-		    <!-- Gurbani Content -->
-		    <div class="guru_granth_sahib_baani list-group-right">
-		    	<div class="containerX">
-		    		<div class="main_screen_listX swipe-gesture list-group-center-on-next">
-		    		</div>
-		    		<div class="tatkra_listX swipe-gesture list-group-right-on-next">
-		    		</div>
-		    		<div class="nitnem_listX swipe-gesture list-group-left-on-next">
-		    		</div>
-		    	</div>
+			<!-- Gurbani Content -->
+			<div class="guru_granth_sahib_baani list-group-right">
+				<div class="containerX">
+					<div class="main_screen_listX swipe-gesture list-group-center-on-next">
+					</div>
+					<div class="tatkra_listX swipe-gesture list-group-right-on-next">
+					</div>
+					<div class="nitnem_listX swipe-gesture list-group-left-on-next">
+					</div>
+				</div>
 
-		    </div>
+			</div>
 
-        </div>
+		</div>
 		<!-- <footer>
 			<div class="angNoContainer">
 				<p><span id="angNo"></span></p>
@@ -141,7 +143,7 @@
 			<div class="goToAngModalChildWrapper">
 				<div class="label_select_ang">Enter Ang No.</div>
 				<div>
-					<input type="number" id="goToAngText" step="1" min="1" max="1430" name="txtNumber"/>
+					<input type="number" id="goToAngText" step="1" min="1" max="1430" name="txtNumber" />
 				</div>
 				<div class="modal_footer">
 					<button id="cancel">Cancel</button>
@@ -155,19 +157,29 @@
 				<div class="optionsItems">
 					<ul>
 						<li>
-							<label><input type="radio" name="optionThemeInput" value="0" checked> <span></span>Default Dark</label>
+							<label>
+								<input type="radio" name="optionThemeInput" value="0" checked>
+								<span></span>Default Dark</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionThemeInput" value="1"> <span></span>Cassandra</label>
+							<label>
+								<input type="radio" name="optionThemeInput" value="1">
+								<span></span>Cassandra</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionThemeInput" value="2"> <span></span>Dark Royal</label>
+							<label>
+								<input type="radio" name="optionThemeInput" value="2">
+								<span></span>Dark Royal</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionThemeInput" value="3"> <span></span>Light Floral</label>
+							<label>
+								<input type="radio" name="optionThemeInput" value="3">
+								<span></span>Light Floral</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionThemeInput" value="4"> <span></span>Vintage</label>
+							<label>
+								<input type="radio" name="optionThemeInput" value="4">
+								<span></span>Vintage</label>
 						</li>
 					</ul>
 				</div>
@@ -175,31 +187,39 @@
 				<div class="optionsItems">
 					<ul>
 						<li>
-							<label><input type="radio" name="optionFontSizeInput" value="4"> <span></span>Huge</label>
+							<label>
+								<input type="radio" name="optionFontSizeInput" value="4">
+								<span></span>Huge</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionFontSizeInput" value="3"> <span></span>Large</label>
+							<label>
+								<input type="radio" name="optionFontSizeInput" value="3">
+								<span></span>Large</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionFontSizeInput" value="2" checked> <span></span>Medium</label>
+							<label>
+								<input type="radio" name="optionFontSizeInput" value="2" checked>
+								<span></span>Medium</label>
 						</li>
 						<li>
-							<label><input type="radio" name="optionFontSizeInput" value="1"> <span></span>Small</label>
+							<label>
+								<input type="radio" name="optionFontSizeInput" value="1">
+								<span></span>Small</label>
 						</li>
 					</ul>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/hammer.min.js"></script>
-    <script type="text/javascript" src="js/jquery.hammer.js"></script>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/less.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/output.js"></script>
-    <script type="text/javascript" src="js/nitnem.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hammer.min.js"></script>
+	<script type="text/javascript" src="js/jquery.hammer.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/less.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/output.js"></script>
+	<script type="text/javascript" src="js/nitnem.js"></script>
 </body>
 
 </html>

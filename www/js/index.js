@@ -21,12 +21,19 @@ var app = {
     initialize: function() {
         this.bindEvents();
         $(document).ready(function() {
+
+            setTimeout(function() {
+                $("#splashScreen").fadeOut("slow");
+            }, 1500)
+
+
             if (typeof localStorage !== 'undefined') {
                 try {
                     localStorage.setItem('feature_test', 'yes');
                     if (localStorage.getItem('feature_test') === 'yes') {
-                        var user_theme = localStorage.getItem('theme');
-                        less.modifyVars(themes[user_theme]);
+                        var user_theme_index = localStorage.getItem('theme');
+                        less.modifyVars(themes[user_theme_index]);
+                        $("[name='optionThemeInput']").val([user_theme_index])
                         // localStorage is enabled
                     } else {
                         // localStorage is disabled
