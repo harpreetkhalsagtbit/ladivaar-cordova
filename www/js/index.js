@@ -32,19 +32,24 @@ var app = {
                     localStorage.setItem('feature_test', 'yes');
                     if (localStorage.getItem('feature_test') === 'yes') {
                         var vars = {}
-                        var user_theme_index = localStorage.getItem('theme') || "default_dark";
-                        var user_fontsize_index = localStorage.getItem('fonts') || "medium";
-                        
+                        var user_theme_index = localStorage.getItem('theme');
+                        var user_fontsize_index = localStorage.getItem('fonts');
+
                         if(!user_theme_index) {
+                            localStorage.setItem("theme", "default_dark")
+                            user_theme_index = "default_dark"
                             $("input[name='optionThemeInput']").val([user_theme_index])
                         }
 
                         if(!user_fontsize_index) {
+                            localStorage.setItem("fonts", "medium")
+                            user_fontsize_index = "medium"
                             $("input[name='optionFontSizeInput']").val([user_fontsize_index])
                         }
-                        console.log(user_theme_index, user_fontsize_index);
-                        $.extend(vars, themes[user_theme_index], fonts[user_fontsize_index]);
-                        console.log(vars)
+                        console.log(user_fontsize_index)
+                        console.log(user_theme_index)
+                        $.extend(vars, {}, themes[user_theme_index], fonts[user_fontsize_index]);
+                        console.log("vars", vars)
                         less.modifyVars(vars);
                         // localStorage is enabled
                     } else {
@@ -298,7 +303,6 @@ var app = {
     }
 };
 
-app.initialize();
 
 var nitnemBaniList = {
     "japjeesahib": "ਜਪੁਜੀ ਸਾਹਿਬ",
@@ -389,6 +393,10 @@ var themes = {
         "@highlightSecondary":"#E25821"
     }
 }
+
+
+
+app.initialize();
 
 function ladivaarGenerator(baani, element, singleNumber) {
     $('h1 span').unbind("mouseover");
