@@ -258,4 +258,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('run', ['shell:start_cordova_browser']);
 	// grunt.registerTask('default', ['generateHTML']);
 	grunt.registerTask('default', ['shell:compile_less', 'generateHTML', 'shell:start_cordova_browser']);
+
+	grunt.registerTask('less', ['shell:compile_less']);
 };
