@@ -328,7 +328,9 @@ li a {
   top: 0px;
   height: 100%;
   width: 100%;
-  overflow: auto;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
 }
@@ -337,7 +339,9 @@ li a {
   top: 0px;
   height: 100%;
   width: 100%;
-  overflow: auto;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
   /*padding-bottom: 100px;*/
@@ -347,7 +351,9 @@ li a {
   top: 0px;
   height: 100%;
   width: 100%;
-  overflow: auto;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
   /*  overflow: scroll;
@@ -369,7 +375,9 @@ li a {
   width: 100%;
   flex-direction: column;
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
   padding-bottom: 100px;
 }
 .guru_granth_sahib_baani {
@@ -405,7 +413,9 @@ li a {
   top: 0px;
   height: 100%;
   width: 100%;
-  overflow: auto;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
   /*top:70px;*/
   /*  width:100%;
   position:fixed;
@@ -417,14 +427,18 @@ li a {
   top: 0px;
   height: 100%;
   width: 100%;
-  overflow: auto;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 }
 .nitnem_listX {
   position: absolute;
   top: 0px;
   height: 100%;
   width: 100%;
-  overflow: auto;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
   /*hack*/
   display: none;
 }
