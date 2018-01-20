@@ -28,12 +28,14 @@
     "android-versions": "^1.2.1",
     "cordova-android": "^6.3.0",
     "cordova-browser": "^5.0.1",
-    "cordova-ios": "^4.5.2",
+    "cordova-ios": "^4.5.4",
+    "cordova-plugin-splashscreen": "^5.0.1",
     "cordova-plugin-whitelist": "1"
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-splashscreen": {}
     },
     "platforms": [
       "ios",
