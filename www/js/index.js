@@ -38,14 +38,15 @@ var app = {
                         if(!user_theme_index) {
                             localStorage.setItem("theme", "default_dark")
                             user_theme_index = "default_dark"
-                            $("input[name='optionThemeInput']").val([user_theme_index])
                         }
+                        $("input[name='optionThemeInput']").val([user_theme_index])
 
                         if(!user_fontsize_index) {
                             localStorage.setItem("fonts", "medium")
                             user_fontsize_index = "medium"
-                            $("input[name='optionFontSizeInput']").val([user_fontsize_index])
                         }
+                        $("input[name='optionFontSizeInput']").val([user_fontsize_index])
+
                         console.log(user_fontsize_index)
                         console.log(user_theme_index)
                         $.extend(vars, {}, themes[user_theme_index], fonts[user_fontsize_index]);
